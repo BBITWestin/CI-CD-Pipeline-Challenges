@@ -146,6 +146,11 @@ In some cases, especially for significant database changes, it may be more pract
 ## Links
 - [EF Core Migrations from Github Actions](https://mabster.net/posts/ef-migration-github-actions/)
 - [Azure Sample App Repo](https://github.com/azure-samples/todo-csharp-sql/tree/main/) and [*my forked version of this repo*](https://github.com/BBITWestin/todo-csharp-sql)
-- [MS Tutorial: Create a minimal API with ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&tabs=visual-studio)
 - [Strategies for Database Development and Deployment (C#)](https://learn.microsoft.com/en-us/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-cs)
 - [Blue-green Deployments, A/B Testing, and Canary Releases](https://blog.christianposta.com/deploy/blue-green-deployments-a-b-testing-and-canary-releases/)
+
+
+## Coming Up:
+- Working demo for applying EF Core db migrations with github actions.
+- Once deployments are live, how to get user's frontend to udpate without asking them to refresh their web page.
+- Pipelines for Bugs and Features?

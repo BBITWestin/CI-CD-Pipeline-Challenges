@@ -47,10 +47,12 @@ For my demo I forked the [todo-csharp-sql](https://github.com/azure-samples/todo
 1. Access to azure subscription where you are have atleast `Contributor` and `User access administrator` roles.
 2. In Azure Active Directory you must also be able to register applications for the purpose of configuring github pipeline with azure.
 3. Now that we have the permissions required, simply fork [this repo](https://github.com/azure-samples/todo-csharp-sql/tree/main/).
-4. Skip step 4 if you are okay with dropping the database each time you want to edit the schema during testing.
-4. Before following the steps listed in the read me it's important to remove `await db.Database.EnsureCreatedAsync();` in program.cs before deploying (`azd up` or pushing to main). This way you can use ef core migrations. See the [Remarks section here](https://learn.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.infrastructure.databasefacade.ensurecreatedasync?view=efcore-8.0) for more details on why the sample app choose to use `EnsureCreatedAsync()`. You might need to comment out `await db.Database.EnsureCreatedAsync();` and then deploy before adding migrations and updating for the first time.
-5. Now follow the `azd` steps to provision, deploy, and config the pipeline.
-6. When you're done testing for the day simply run `azd down`. *Azure sql databases are expensive to run*.
+4. Skip step 5 if you are okay with dropping the database each time you want to edit the schema during testing.
+5. Before following the steps listed in the read me it's important to remove `await db.Database.EnsureCreatedAsync();` in program.cs before deploying (`azd up` or pushing to main). This way you can use ef core migrations. See the [Remarks section here](https://learn.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.infrastructure.databasefacade.ensurecreatedasync?view=efcore-8.0) for more details on why the sample app choose to use `EnsureCreatedAsync()`.
+    - You might need to comment out `await db.Database.EnsureCreatedAsync();` and then deploy before adding migrations and updating for the first time.
+    - You will also need to remove the `Provision Infrastructure` *step* in ./github/workflows/***.yml before continueing.
+6. Now follow the `azd` steps to provision, deploy, and config the pipeline.
+7. When you're done testing for the day simply run `azd down`. *Azure sql databases are expensive to run*.
 
 I still have some more testing to get done to figure out exactly how everything is playing together in this sample app. But [my repo](https://github.com/BBITWestin/auto-migrate-demo) does in fact update the database on deployments automatically.
 

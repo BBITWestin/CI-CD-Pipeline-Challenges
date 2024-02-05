@@ -179,10 +179,10 @@ In some cases, especially for significant database changes, it may be more pract
 
 
 ## Coming Up:
-- Blue Green strategy working demo for entire CI/CD pipeline.
 - Once deployments are live, how to get user's frontend to udpate without asking them to refresh their web page.
 - Pipelines for Bugs and Features?
 
 ## Later On:
 - Blue Green strategy working demo for entire CI/CD pipeline.
     - 1 Dev, 2 Prod (green/blue).
+- Rollback demo

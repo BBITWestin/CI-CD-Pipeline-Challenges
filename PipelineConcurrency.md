@@ -1,6 +1,6 @@
 # CI/CD Pipeline Challenges
 
-Trevor Westin - 1/31/2024
+Trevor Westin - 2/2/2024
 
 ## Challenges
 
@@ -18,12 +18,6 @@ Same problem can be said for backend and database as you'll see in Scenario 2.
 
 It's time to make changes to the database. We locally `add-migration` and `update-database` with the connection string to it's respective database while github actions is deploying our updated backend. Not only are these locally run commands going to be out of sync with github actions, we also introduce the posibility for human error... maybe we run the commands on the wrong branch? or use the wrong connection string? ...or maybe Jacob forgets!!!!
 
-### Goal
-
-- Seamless transition between deployments with zero downtime, from a user perspective.
-- Maintain compatibility between the frontend, backend and database during the deployment process.
-- Implement a reliable rollback strategy.
-
 ### Scenario 2 Solution 1: MigrateAsync()
 
 Use the following in Program.cs
@@ -40,21 +34,21 @@ await using (var scope = app.Services.CreateAsyncScope())
 
 When we make changes to our models in the backend we can simply add the migration and merge to DEV/PROD to trigger our github workflow for redeploying the backend per usual. Program.cs will run `MigrateAsync()` on start, applying any pending migrations.
 
-
 For my demo I forked the [todo-csharp-sql](https://github.com/azure-samples/todo-csharp-sql/tree/main/) Azure sample app and deployed to [Ephemral](https://portal.azure.com/#@bbilogistics.com/resource/subscriptions/229ea71b-e62b-4512-a96a-50624b60eac2/overview) Subscription.
 
 #### Steps to recreate Demo
+
 1. Access to azure subscription where you are have atleast `Contributor` and `User access administrator` roles.
 2. In Azure Active Directory you must also be able to register applications for the purpose of configuring github pipeline with azure.
 3. Now that we have the permissions required, simply fork [this repo](https://github.com/azure-samples/todo-csharp-sql/tree/main/).
 4. Skip step 5 if you are okay with dropping the database each time you want to edit the schema during testing.
 5. Before following the steps listed in the read me it's important to remove `await db.Database.EnsureCreatedAsync();` in program.cs before deploying (`azd up` or pushing to main). This way you can use ef core migrations. See the [Remarks section here](https://learn.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.infrastructure.databasefacade.ensurecreatedasync?view=efcore-8.0) for more details on why the sample app choose to use `EnsureCreatedAsync()`.
-    - You might need to comment out `await db.Database.EnsureCreatedAsync();` and then deploy before adding migrations and updating for the first time.
-    - You will also need to remove the `Provision Infrastructure` *step* in ./github/workflows/***.yml before continueing.
+   - You might need to comment out `await db.Database.EnsureCreatedAsync();` and then deploy before adding migrations and updating for the first time.
+   - You will also need to remove the `Provision Infrastructure` _step_ in ./github/workflows/\*\*\*.yml before continueing.
 6. Now follow the `azd` steps to provision, deploy, and config the pipeline.
-7. When you're done testing for the day simply run `azd down`. *Azure sql databases are expensive to run*.
+7. When you're done testing for the day simply run `azd down`. _Azure sql databases are expensive to run_.
 
-I still have some more testing to get done to figure out exactly how everything is playing together in this sample app. But [my repo](https://github.com/BBITWestin/auto-migrate-demo) does in fact update the database on deployments automatically.
+I still have some more testing to get done to figure out exactly how everything is playing together in this sample app. But [my repo](https://github.com/BBITWestin/pipeline-demo) does in fact update the database on deployments automatically.
 
 ### Scenario 2 Solution 2: Github Actions
 
@@ -86,7 +80,7 @@ jobs:
           run: dotnet ef migrations bundle --startup-project MyApp --output ${{env.DOTNET_ROOT}}/myapp/efbundle.exe --configuration Bundle
       - name: Apply EF migration script
           run: ./efbundle.exe --connection "${{ secrets.MY_CONNECTION_STRING }}"
-          
+
   backend_deployment:
     needs: database_migration
     runs-on: ubuntu-latest
@@ -174,17 +168,20 @@ In some cases, especially for significant database changes, it may be more pract
 - At the end the results from 2 groups which is a variety of metrics is compared to determine which version performed better.
 
 ## Links
+
 - [EF Core Migrations from Github Actions](https://mabster.net/posts/ef-migration-github-actions/)
-- [Azure Sample App Repo](https://github.com/azure-samples/todo-csharp-sql/tree/main/) and [*my forked version of this repo*](https://github.com/BBITWestin/auto-migrate-demo)
+- [Azure Sample App Repo](https://github.com/azure-samples/todo-csharp-sql/tree/main/) and [_my forked version of this repo_](https://github.com/BBITWestin/pipeline-demo)
 - [Strategies for Database Development and Deployment (C#)](https://learn.microsoft.com/en-us/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-cs)
 - [Blue-green Deployments, A/B Testing, and Canary Releases](https://blog.christianposta.com/deploy/blue-green-deployments-a-b-testing-and-canary-releases/)
 
-
 ## Coming Up:
+
 - Once deployments are live, how to get user's frontend to udpate without asking them to refresh their web page.
 - Pipelines for Bugs and Features?
 
 ## Later On:
+
 - Blue Green strategy working demo for entire CI/CD pipeline.
-    - 1 Dev, 2 Prod (green/blue).
-- Rollback demo
+  - 1 Dev, 2 Prod (green/blue).
+  - Rollback demo
+- Rollback demo independant of Blue Green deployment.

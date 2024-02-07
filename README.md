@@ -1,12 +1,6 @@
-# Docs
+# My Docs
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
+![Static Badge](https://img.shields.io/badge/------------%20HELLO%20WORLD!%20-------------8A2BE2.svg?style=for-the-badge)
 
 [![Commits][last-commits-shield]][last-commits-url]
 [![Contributors][contributors-shield]][contributors-url]

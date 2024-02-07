@@ -96,9 +96,7 @@ Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 
 - fenjnfdksnmfksn
 
-### Auth0 :white_check_mark:
-
-simply the :goat: :sunglasses:
+### Auth0
 
 [Auth0](https://auth0.com/docs/get-started/auth0-overview) is a drop-in solution to add authentication and authorization services to your app.
 

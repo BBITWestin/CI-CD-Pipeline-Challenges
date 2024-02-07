@@ -1,6 +1,6 @@
 # User Auth Challenges
 
-Trevor Westin - 2/8/2024
+2/8/2024
 
 ## Challenges
 
@@ -89,6 +89,16 @@ So how can we actually implement authentication and then access control?
 Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 
 [Microsoft Entra Verified ID now in Public Preview](https://www.microsoft.com/en-us/security/business/solutions/decentralized-identity)
+
+### ~~MS Entra External Preview~~ :bricks:
+
+Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
+
+[Microsoft Entra Verified ID now in Public Preview](https://www.microsoft.com/en-us/security/business/solutions/decentralized-identity)
+
+### Azure AD B2C
+
+- fenjnfdksnmfksn
 
 ### Auth0 :white_check_mark:
 

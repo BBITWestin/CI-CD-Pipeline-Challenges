@@ -94,7 +94,7 @@ Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 
 ### Azure AD B2C
 
-- fenjnfdksnmfksn
+[Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/overview) provides business-to-customer identity as a service.
 
 ### Auth0
 

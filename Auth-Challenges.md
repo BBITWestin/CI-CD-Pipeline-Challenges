@@ -10,11 +10,79 @@ Trevor Westin - 2/8/2024
   - Authorization Schema to View Load and Customer Level Data
     - Management Portal and Admin Users Managing Authorization Schema
 
-## Access Control
+## 1. Access Control
+
+Access control governs who can access particular data, applications, and resources inside an organization and under what circumstances. Here are the three popular access control types:
+
+1. Role Based (RBAC)
+2. Claim Based (CBAC)
+3. Permission Based (PBAC)
+
+### Role Based Access Control (RBAC)
+
+Limits access based on user's role.
+
+#### Advantages
+
+- Policies can be assigned to user groups instead of manually to individuals.
+- Integrating third-party users is also more secure with RBAC, as we can give them strictly defined roles and permissions.
+
+#### Disadvantages
+
+- Roles minimize the potential for altering the permissions for a single user or group of users, forcing us to create new roles to give them a customized set of permissions.
+
+### 2. Claim Based Access Control (CBAC)
+
+We can use claims-based access control, also known as attribute-based access control (ABAC), either as a replacement or a supplement to RBAC to provide more granular access control.
+
+CBAC restricts and provides access to critical resources based on a combination of three factors:
+
+1. User's identity
+2. User's responsibilities
+3. The context of the action performed
+
+### Example:
+
+The second I get assigned to Herzog's team I should have access to his load board.
+
+#### Advantages
+
+- Policies can be precisely defined, targetting specific attributes rather than the roles of the users.
+- Dynamic access: Since rules can be specified based on environmental parameters, access control can be done at runtime by evaluating the context.
+
+#### Disadvantages
+
+- Granularity introduces complexity.
+
+### 3. Permission Based Access Control (PBAC)
+
+Permission-based access control focuses on defining the set of actions each user is allowed to perform on each resource. Think CRUD.
+
+These rules should be specified for each user as a pair, indicating the resources and the permitted actions such as view, create, edit, and delete.
+
+#### Example
+
+Herzog needs my help on a load for the day. He gives me permission in some admin dashboard... hidden behind other policy's Herzog has access to.
+
+#### Advantages
+
+- Fine granularity: Permission can be defined flexibly for each entity for each resource in the system.
+
+#### Disadvantages
+
+- Less scalable: When the number of users is high, how can we ensure were managing permissions for each user correctly.
+
+### 4. Compare
 
 ![Compare](https://static-assets.amplication.com/blog/choosing-between-role-based-vs-claims-based-vs-permission-based-access-control-mechanism/1.png)
 
+### Other Notes
+
+We would be best off setting something up to keep logs of any time a role, claim, or permission is updated.
+
 ## Auth Services
+
+So how can we actually implement authentication and then access control?
 
 ### 1. :bricks: ~~MS Entra Preview~~
 

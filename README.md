@@ -8,10 +8,12 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
+[![Commits][last-commits-shield]][last-commits-url]
 [![Contributors][contributors-shield]][contributors-url]
+
+[![Issues][issues-shield]][issues-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
 
 ## Contributing
 
@@ -30,6 +32,8 @@
 [contributors-url]: https://github.com/BBITWestin/My-Docs/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/BBITWestin/My-Docs.svg?style=for-the-badge
 [forks-url]: https://github.com/BBITWestin/My-Docs/network/members
+[last-commits-shield]: https://img.shields.io/github/last-commit/BBITWestin/My-Docs.svg?style=for-the-badge
+[last-commits-url]: https://github.com/BBITWestin/My-Docs
 [stars-shield]: https://img.shields.io/github/stars/BBITWestin/My-Docs.svg?style=for-the-badge
 [stars-url]: https://github.com/BBITWestin/My-Docs/stargazers
 [issues-shield]: https://img.shields.io/github/issues/BBITWestin/My-Docs.svg?style=for-the-badge

@@ -89,6 +89,7 @@ So how can we actually implement authentication and then access control?
 Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 
 [Microsoft Entra Verified ID now in Public Preview](https://www.microsoft.com/en-us/security/business/solutions/decentralized-identity)
+
 [Microsoft Entra External ID now in Public Preview](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-external-id)
 
 ### Azure AD B2C

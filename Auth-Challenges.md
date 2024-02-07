@@ -18,11 +18,13 @@ Trevor Westin - 2/8/2024
 
 ### 1. :bricks: ~~MS Entra Preview~~
 
-Preview = :wastebasket: :boom: :fire: :ambulance:
+Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 
 [Microsoft Entra Verified ID now in Public Preview](https://www.microsoft.com/en-us/security/business/solutions/decentralized-identity)
 
-### 2. :check: Auth0
+### 2. Auth0 :white_check_mark:
+
+simply the goat :sunglasses:
 
 ---
 

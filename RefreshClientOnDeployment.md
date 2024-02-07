@@ -171,7 +171,7 @@ public class VersionCheckMiddleware
     }
 }
 
-// And in Startup.cs, add this middleware to the pipeline
+// And in Program.cs, add this middleware to the pipeline
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
     // Other configurations...

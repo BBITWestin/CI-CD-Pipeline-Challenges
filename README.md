@@ -27,7 +27,7 @@
 [forks-shield]: https://img.shields.io/github/forks/BBITWestin/My-Docs.svg?style=for-the-badge
 [forks-url]: https://github.com/BBITWestin/My-Docs/network/members
 [last-commits-shield]: https://img.shields.io/github/last-commit/BBITWestin/My-Docs.svg?style=for-the-badge
-[last-commits-url]: https://github.com/BBITWestin/My-Docs
+[last-commits-url]: https://github.com/BBITWestin/My-Docs/commits/main/
 [stars-shield]: https://img.shields.io/github/stars/BBITWestin/My-Docs.svg?style=for-the-badge
 [stars-url]: https://github.com/BBITWestin/My-Docs/stargazers
 [issues-shield]: https://img.shields.io/github/issues/BBITWestin/My-Docs.svg?style=for-the-badge

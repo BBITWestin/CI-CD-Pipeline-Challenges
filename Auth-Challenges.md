@@ -24,7 +24,7 @@ Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 
 ### 2. Auth0 :white_check_mark:
 
-simply the goat :sunglasses:
+simply the :goat: :sunglasses:
 
 ---
 

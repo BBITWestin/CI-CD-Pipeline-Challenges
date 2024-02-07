@@ -96,9 +96,26 @@ Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 
 [Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/overview) provides business-to-customer identity as a service.
 
+- [Technical and feature overview of Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/technical-overview)
+
+#### Features
+
+- Custom-branded identity solution (Full control over UI)
+- Provides a directory that can hold 100 [custom attributes](https://learn.microsoft.com/en-us/azure/active-directory-b2c/user-profile-attributes) per user.
+
+#### Advantages
+
+#### Disadvantages
+
 ### Auth0
 
 [Auth0](https://auth0.com/docs/get-started/auth0-overview) is another drop-in solution to add authentication and authorization services to your app.
+
+#### Features
+
+#### Advantages
+
+#### Disadvantages
 
 ---
 

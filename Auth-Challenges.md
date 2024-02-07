@@ -84,13 +84,13 @@ We would be best off setting something up to keep logs of any time a role, claim
 
 So how can we actually implement authentication and then access control?
 
-### 1. :bricks: ~~MS Entra Preview~~
+### ~~MS Entra Preview~~ :bricks:
 
 Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 
 [Microsoft Entra Verified ID now in Public Preview](https://www.microsoft.com/en-us/security/business/solutions/decentralized-identity)
 
-### 2. Auth0 :white_check_mark:
+### Auth0 :white_check_mark:
 
 simply the :goat: :sunglasses:
 

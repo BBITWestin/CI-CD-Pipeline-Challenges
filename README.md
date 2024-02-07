@@ -22,7 +22,7 @@
    ```
 3. Commit & Push your Changes
    ```sh
-   git add . ; git commit -m "Add some AmazingFeature" ; git push
+   git add . ; git commit -m "Some AmazingFeature" ; git push
    ```
 4. Open a Pull Request
 

@@ -98,7 +98,7 @@ Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 
 ### Auth0
 
-[Auth0](https://auth0.com/docs/get-started/auth0-overview) is a drop-in solution to add authentication and authorization services to your app.
+[Auth0](https://auth0.com/docs/get-started/auth0-overview) is another drop-in solution to add authentication and authorization services to your app.
 
 ---
 

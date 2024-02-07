@@ -39,11 +39,11 @@ WebSockets are continuous connections. Websockets are typically used when the se
 #### Pros
 
 - Server CPU load is proportional to how many sockets are busy at any given time as an idle socket does't take any CPU.
+- Cheap ($2/day/1000 concurrent connections). See Azure Web [PubSub pricing](https://azure.microsoft.com/en-us/pricing/details/web-pubsub/).
 
 #### Cons
 
-- Although cheap ($2/day/1000 concurrent connections) there is still some server overhead to maintain an open socket to a client. Keeping an open connection 24/7 feels like overkill for handling even daily deployments which likely won't be the case.
-  - See Azure Web [PubSub pricing](https://azure.microsoft.com/en-us/pricing/details/web-pubsub/).
+- Keeping an open connection 24/7 feels like overkill for handling even daily deployments which likely won't be the case.
 
 ### Implementation 2: Server-Sent Events
 
@@ -139,6 +139,7 @@ Conditional Requests are based on the use of specific HTTP request headers that 
 Backend Middleware Implementation (C# .NET): Add middleware to check if the ETag (which represents the version) in the incoming request matches the backend's current version. If they don't match, you'll return a custom response.
 
 ```C#
+// VersionCheckMiddleware.cs
 public class VersionCheckMiddleware
 {
     private readonly RequestDelegate _next;
@@ -184,14 +185,15 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 Frontend Implementation (React): On the frontend, you'll include the version ETag in each request. If you receive the custom response code indicating a version mismatch, you'll prompt the user to refresh.
 
 ```jsx
-// apiCaller.js
+// ETagDemoCaller.js
 import axios from "axios";
+import config from "../config";
 
-const baseURL = "http://your-api-base-url.com"; // Your API base URL
+const baseURL = config.api.baseUrl;
 const frontendVersionETag = '"1.0.0"'; // The current frontend version ETag
 
 // Create an Axios instance with default headers, including the ETag
-const apiInstance = axios.create({
+const ETagDemoCaller = axios.create({
   baseURL,
   headers: {
     "Content-Type": "application/json",
@@ -200,7 +202,7 @@ const apiInstance = axios.create({
 });
 
 // Response interceptor to handle version mismatches
-apiInstance.interceptors.response.use(
+ETagDemoCaller.interceptors.response.use(
   (response) => {
     return response;
   },
@@ -217,10 +219,20 @@ apiInstance.interceptors.response.use(
   }
 );
 
-export default apiInstance;
+export default ETagDemoCaller;
 ```
 
 For [my demo](https://github.com/BBITWestin/pipeline-demo) I continued off of my last weeks auto db migration demo forked from the [todo-csharp-sql](https://github.com/azure-samples/todo-csharp-sql/tree/main/). I didn't bother deploying to azure for this demo as we can change the version numbers just fine locally. If you want to see an end-to-end implementation of an azure sample app check out [PipelineConcurrency.md #steps-to-recreate-demo](https://github.com/BBITWestin/CI-CD-Pipeline-Challenges/blob/main/PipelineConcurrency.md#steps-to-recreate-demo)
+
+To run a azure sample app locally follow the steps [here](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/debug?pivots=ide-vs-code).
+
+See program.cs line 38 where we insert the `VersionCheckMiddleware` after CORS but before routing and endpoints are configured.
+
+We put the `VersionCheckMiddleware` class in ./src/api/Middleware/VersionCheckMiddleware.cs using the same code snippet above.
+
+On the frontend I defined `ETagDemoCaller` in ./src/web/src/services/ETagDemoCaller.js with the snipper above as well.
+
+Start up the frontend and backend and click on the Red ETagDemoCaller button to test out different version numbers.
 
 #### Notes
 

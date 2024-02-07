@@ -94,6 +94,8 @@ Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 
 simply the :goat: :sunglasses:
 
+[Auth0](https://auth0.com/docs/get-started/auth0-overview) is a drop-in solution to add authentication and authorization services to your app.
+
 ---
 
 #### Links

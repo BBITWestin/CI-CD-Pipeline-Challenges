@@ -22,6 +22,9 @@
    ```
 4. Open a Pull Request
 
+## Links
+[Emojis](https://gist.github.com/rxaviers/7360908)
+
 [contributors-shield]: https://img.shields.io/github/contributors/BBITWestin/My-Docs.svg?style=for-the-badge
 [contributors-url]: https://github.com/BBITWestin/My-Docs/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/BBITWestin/My-Docs.svg?style=for-the-badge

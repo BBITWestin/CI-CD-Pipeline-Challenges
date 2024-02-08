@@ -184,6 +184,8 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 Frontend Implementation (React): On the frontend, you'll include the version ETag in each request. If you receive the custom response code indicating a version mismatch, you'll prompt the user to refresh.
 
+Note that [409](https://www.dotcom-monitor.com/wiki/knowledge-base/http-status-codes-list/) is the status code for conflict which is what were using here but we might also choose to go with something between 452-499 which are all unassigned.
+
 ```jsx
 // ETagDemoCaller.js
 import axios from "axios";

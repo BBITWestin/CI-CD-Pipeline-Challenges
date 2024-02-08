@@ -30,7 +30,7 @@ The following implementations all involve some type of **version checking** wher
 But version checking and refreshing comes with some downsides regardless of the implementation:
 
 - How do we version our deployments to be something the frontend and backend can use? Hard coded? Environment Variables? Fetch on page load?
-- Simply triggering a refresh may not be enough to new changes from cashed resources like _server side components_. One work around to this is called `Cache Busting` where we would incorperate the version key / hash into file names forcing the frontend to update these cached resources but more research and testing is needed for this. See [here](https://medium.com/@soheilbakhtyari/understanding-cache-busting-a-practical-approach-for-react-razzle-applications-e3e5ddf0aeaf) for more details.
+- Simply triggering a refresh may not be enough to fetch new changes from cashed resources like _server side components_. One work around to this is called `Cache Busting` where we would incorperate the version key / hash into file names forcing the frontend to update these cached resources but more research and testing is needed for this. See [here](https://medium.com/@soheilbakhtyari/understanding-cache-busting-a-practical-approach-for-react-razzle-applications-e3e5ddf0aeaf) for more details.
 
 ### Implementation 1: WebSockets
 

@@ -120,6 +120,7 @@ Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 ### Azure AD B2C vs Auth0
 
 - Both are going to come along with all the features we should ever need.
+- Anecdotes online mention having an easy time getting Auth0 set up compared to Azure AD.
 
 #### Pricing
 

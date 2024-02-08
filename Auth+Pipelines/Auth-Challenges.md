@@ -123,7 +123,7 @@ Assuming 10,000 active monthly users Azure AD scales much cheaper at $0.01625/Mo
 
 ### Demo
 
-Follow the steps in my [AzAd_Setup]() doc to get a feel for how to implement Azure AD B2C.
+Follow the steps in my [AzAd_Setup](https://github.com/BBITWestin/My-Docs/blob/ab48853f84918703eb9e54e478eb9562b2462321/Auth%2BPipelines/AzAD_Setup.md) doc to get a feel for how to implement Azure AD B2C.
 
 ---
 

@@ -60,3 +60,25 @@ The interquartile range (IQR) was used to remove outliers in the data. Outlier r
 After applying two methods for managing missing values, we compared which method was more useful. Before the processing of missing values, factors for which more than 50% of the data were missing were determined to be factors that did not have a great influence on the prediction and were, thus, removed. We removed 20 factors, including “load/unload name address,” “summary,” and “order number.” For the missing value treatment, listwise deletion and the mean imputation were used, and a dataset was created to which each treatment for missing values was applied. The listwise deletion removed all data with missing values, and the mean imputation replaced the missing values with the average value of each factor.
 
 ![alt text](ML_Missing Data.png)
+
+## Derivation of Key Factors
+
+Correlational analysis and step selection were applied as a means to derive the major factors.
+
+### Correlational Analysis
+
+In this study, independent variables with a correlation coefficient of 0.1 or higher, which is judged to indicate a linear relationship between the independent variable and the dependent variable, were judged to be the main factors.
+
+### Stepwise Method
+
+The stepwise method was one of the methods used for selecting several independent variables to be included in the regression model. It is a method that is used to find the variable constituting the optimal regression model by repeating the addition and removal of variables. The selected variable was judged to be a strong predictor in the prediction model.
+
+![Independent variables](Independent_vars.png)
+
+## Model Construction and Analysis Results
+
+### Data Preparation
+
+To ensure the accuracy of the model, all variables were normalized to the same scale. Min–max normalization, which converts all continuous variable data to values between 0 and 1, was used for normalization. We attempted to derive the shipping cost as a range using the confidence interval. In the case of freight, some characteristics were not fully expressed in the data. Therefore, if the recommended cost is presented as a single value, it has limited means to reflect the volatility of reality. To derive the shipping cost as a range, a 95% confidence interval was calculated for the cost value predicted by the shipping cost prediction model. To ensure that the distribution of the predicted values follows a normal distribution, we increased the predicted values (number of samples) using K-fold cross-validation.
+
+For the suitability of the model, 80% of the collected data were allocated to a training set and 20% to a test set, and the datasets were then used for the model construction and verification. At this time, to derive the cost range, the training set was divided into 30 folds through K-fold cross-validation, and 30 predicted values were derived by predicting the test set for each iteration. For each iteration, 29 training sets and 1 validation set were used. After that, the model was trained on the training set of each fold, and the process of predicting with the test set was repeated until 30 predicted values were derived. Afterward, the maximum and minimum values in the confidence interval were determined as the upper and lower limits of the prediction interval to estimate the predicted cost range. Overall configuration of a dataset for range prediction is shown in Figure 2.

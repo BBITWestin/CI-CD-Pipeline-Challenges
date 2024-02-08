@@ -103,19 +103,9 @@ Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 - Custom-branded identity solution (Full control over UI)
 - Provides a directory that can hold 100 [custom attributes](https://learn.microsoft.com/en-us/azure/active-directory-b2c/user-profile-attributes) per user.
 
-#### Advantages
-
-#### Disadvantages
-
 ### Auth0
 
 [Auth0](https://auth0.com/docs/get-started/auth0-overview) is another drop-in solution to add authentication and authorization services to your app.
-
-#### Features
-
-#### Advantages
-
-#### Disadvantages
 
 ### Azure AD B2C vs Auth0
 
@@ -130,6 +120,10 @@ Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 Assuming 10,000 active monthly users Azure AD scales much cheaper at $0.01625/Monthly Active Users for Premium P2 (highest) vs Auth0's $0.16 / MAU for B2C (PROFESSIONAL) or $0.07 / MAU for B2C (ESSENTIALS).
 
 ![alt text](Azure_Auth0_Pricing.png)
+
+### Demo
+
+Follow the steps in my [AzAd_Setup]() doc to get a feel for how to implement Azure AD B2C.
 
 ---
 

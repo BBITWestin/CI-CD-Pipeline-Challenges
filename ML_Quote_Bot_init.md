@@ -31,6 +31,8 @@ Given the nature of the problem (predicting a continuous value), regression mode
 - **Gradient Boosting Machines (GBM)**: XGBoost, LightGBM, or CatBoost, are popular for regression tasks.
 - **Deep Learning Models**: Neural networks can be beneficial, especially with large datasets and complex relationships, but they require more computational resources.
 
+See the two links below for why these models might be best.
+
 ## 5. Feature Selection
 
 Use techniques to select the most relevant features to reduce model complexity and improve performance. This can be achieved through methods like:
@@ -68,3 +70,8 @@ Regularly monitor the model's performance and update it with new data to ensure 
 #### Technical Stack
 
 Python with libraries such as Pandas, Scikit-learn for ML models, and TensorFlow or PyTorch for deep learning.
+
+## Links
+
+[Prediction of Shipping Cost on Freight Brokerage Platform Using Machine Learning](https://www.mdpi.com/2071-1050/15/2/1122)
+[Utilizing Machine Learning, Predicting Shipping Costs on a Freight Brokerage Platform](https://www.hilarispublisher.com/open-access/utilizing-machine-learning-predicting-shipping-costs-on-a-freight-brokerage-platform-95342.html)

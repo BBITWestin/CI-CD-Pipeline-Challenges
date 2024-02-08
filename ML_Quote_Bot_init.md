@@ -73,6 +73,7 @@ Python with libraries such as Pandas, Scikit-learn for ML models, and TensorFlow
 
 ## Links
 
+[My Notes on "Prediction of Shipping Cost on Freight Brokerage Platform Using Machine Learning"]()
 [Prediction of Shipping Cost on Freight Brokerage Platform Using Machine Learning](https://www.mdpi.com/2071-1050/15/2/1122)
 [Utilizing Machine Learning, Predicting Shipping Costs on a Freight Brokerage Platform](https://www.hilarispublisher.com/open-access/utilizing-machine-learning-predicting-shipping-costs-on-a-freight-brokerage-platform-95342.html)
 [UNLOCKING THE POWER OF MACHINE LEARNING TO FORECAST TRUCKING RATES](https://www.penskelogistics.com/industries/industrial-manufacturing/machine-learning)

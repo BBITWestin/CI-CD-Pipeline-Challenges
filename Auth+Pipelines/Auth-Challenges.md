@@ -120,14 +120,14 @@ Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 ### Azure AD B2C vs Auth0
 
 - Both are going to come along with all the features we should ever need.
-- Anecdotes online mention having an easy time getting Auth0 set up compared to Azure AD.
+- Anecdotes online mention having an easy time getting Auth0 set up compared to Azure AD, but others mention the steep price differences as well.
 
 #### Pricing
 
 - Azure AD [pricing](https://azure.microsoft.com/en-us/pricing/details/active-directory-external-identities/)
 - Auth0 [pricing](https://auth0.com/pricing)
 
-Assuming 10,000 active monthly users Azure AD scales much cheaper at $0.01625/Monthly Active Users for Premium P2 (highest) vs Auth0's $0.24 / MAU for B2C (PROFESSIONAL) or $0.07 / MAU for B2C (ESSENTIALS).
+Assuming 10,000 active monthly users Azure AD scales much cheaper at $0.01625/Monthly Active Users for Premium P2 (highest) vs Auth0's $0.16 / MAU for B2C (PROFESSIONAL) or $0.07 / MAU for B2C (ESSENTIALS).
 
 ![alt text](Azure_Auth0_Pricing.png)
 

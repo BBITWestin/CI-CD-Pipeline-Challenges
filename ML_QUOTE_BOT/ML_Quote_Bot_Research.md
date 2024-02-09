@@ -8,7 +8,11 @@ The following are my notes / summary from [Prediction of Shipping Cost on Freigh
 
 This study derives the main variables that influence the setting of the shipping costs and presents the recommended shipping cost given by a price prediction model using machine learning methods.
 
-The cost prediction model was built using four algorithms: multiple linear regression, deep neural network, XGBoost regression, and LightGBM regression. R-squared was used as the performance evaluation index. In view of the results of this study, LightGBM was chosen as the model with the greatest explanatory power and the fastest processing. Furthermore, the range of the predicted shipping costs was determined considering realistic usage patterns. The confidence interval was used as the method of calculation for the range of the predicted shipping costs, and, for this purpose, the dataset was classified using the K-fold cross-validation method. This paper could be used to set the shipping costs on freight brokerage platforms and to improve utilization rates.
+The cost prediction model was built using four algorithms: multiple linear regression, deep neural network, XGBoost regression, and LightGBM regression. R-squared was used as the performance evaluation index.
+
+In view of the results of this study, LightGBM was chosen as the model with the greatest explanatory power and the fastest processing. Furthermore, the range of the predicted shipping costs was determined considering realistic usage patterns. The confidence interval was used as the method of calculation for the range of the predicted shipping costs, and, for this purpose, the dataset was classified using the K-fold cross-validation method.
+
+This paper could be used to set the shipping costs on freight brokerage platforms and to improve utilization rates.
 
 ## Intro
 
@@ -49,7 +53,11 @@ The dataset consists of 1,885,033 data observations and 78 variables used by fre
 
 In the dataset, variables that were related to the personal information of the cargo owners and vehicle owners, such as name, vehicle number, and phone number, were deleted, as they were judged to be irrelevant to the shipping cost prediction.
 
-The latitude and longitude of the upper and lower location were calculated using the haversine distance formula and were added as a “linear distance.” It was judged that detailed date and time information could affect the cost setting, so the arrival and departure dates were subdivided into the month, day, day of the week, and time, and new variables were created for each. In addition, we added the precipitation amount as a new factor, considering that the weather conditions at the time of the cargo transport would affect the shipping cost. The precipitation data of the Korea Meteorological Administration were used, and the precipitation value was added by considering the loading and unloading locations and dates.
+The latitude and longitude of the upper and lower location were calculated using the haversine distance formula and were added as a “linear distance.”
+
+It was judged that detailed date and time information could affect the cost setting, so the arrival and departure dates were subdivided into the month, day, day of the week, and time, and new variables were created for each.
+
+In addition, we added the precipitation amount as a new factor, considering that the weather conditions at the time of the cargo transport would affect the shipping cost. The precipitation data of the Korea Meteorological Administration were used, and the precipitation value was added by considering the loading and unloading locations and dates.
 
 #### Removing Data Outliers
 
@@ -79,6 +87,46 @@ The stepwise method was one of the methods used for selecting several independen
 
 ### Data Preparation
 
-To ensure the accuracy of the model, all variables were normalized to the same scale. Min–max normalization, which converts all continuous variable data to values between 0 and 1, was used for normalization. We attempted to derive the shipping cost as a range using the confidence interval. In the case of freight, some characteristics were not fully expressed in the data. Therefore, if the recommended cost is presented as a single value, it has limited means to reflect the volatility of reality. To derive the shipping cost as a range, a 95% confidence interval was calculated for the cost value predicted by the shipping cost prediction model. To ensure that the distribution of the predicted values follows a normal distribution, we increased the predicted values (number of samples) using K-fold cross-validation.
+Min–max normalization, which converts all continuous variable data to values between 0 and 1, was used for normalization. We attempted to derive the shipping cost as a range using the confidence interval. To derive the shipping cost as a range, a 95% confidence interval was calculated for the cost value predicted by the shipping cost prediction model.
 
 For the suitability of the model, 80% of the collected data were allocated to a training set and 20% to a test set, and the datasets were then used for the model construction and verification. At this time, to derive the cost range, the training set was divided into 30 folds through K-fold cross-validation, and 30 predicted values were derived by predicting the test set for each iteration. For each iteration, 29 training sets and 1 validation set were used. After that, the model was trained on the training set of each fold, and the process of predicting with the test set was repeated until 30 predicted values were derived. Afterward, the maximum and minimum values in the confidence interval were determined as the upper and lower limits of the prediction interval to estimate the predicted cost range. Overall configuration of a dataset for range prediction is shown in Figure 2.
+
+![k_fold](k_fold.png)
+
+This study was conducted using Python version 3.9. Python language-based TensorFlow and the scikit-learn machine learning algorithms were also used.
+
+### MLR
+
+### DNN
+
+### XGBoost Regression
+
+### LightGBM
+
+### Model Comparison
+
+The LightGBM model has the best predictive power, followed by the XGBoost and DNN, and the MLR model has the lowest predictive power.
+
+The time required for model learning is also an important factor to consider for field applications. If a model takes a long time to learn, even if it shows a high accuracy, it may be difficult to apply to a field where rapid decision-making is required. The learning time of the correlation analysis method with few variables to consider was short, and the model with the shortest required time was the MLR model. The second shortest required time model was the LightGBM. The DNN model had a high predictive power, but it took a long time to learn compared with the other models, so it was judged to be difficult to apply in the field.
+
+Considering both the speed and performance among the machine learning models, the LightGBM model was judged to be the most suitable for predicting the shipping cost. If the model performance is optimized in the future, the accuracy of the model could be further increased.
+
+![model_comparison](model_comparison.png)
+
+### Variable Importance
+
+Another purpose of this study was to derive factors that affect the cost setting. In order to derive these factors, the variable with the greatest contribution to the prediction of the shipping cost was identified using Shapley Additive exPlanations (SHAP).
+
+![variable_importance](variable_importance.png)
+
+The factors that make a high contribution to the shipping cost prediction are “linear distance,” “actual distance,” “freight weight,” and “vehicle tonnage,” which are highly related to transportation distance and freight characteristics. In particular, “linear distance” showed a high contribution of greater than 50%. It was judged that “linear distance” has a greater influence than “actual distance” in determining the shipping cost.
+
+## Conclusions and Future Research
+
+The model that showed the best predictive power among the models used was the LightGBM model.
+
+The factors that contributed the most to the cost setting was “linear distance,” and “actual distance,” “freight weight,” and “vehicle tonnage” were also found to be major variables that influence the cost setting.
+
+No valid results were obtained for “precipitation,” which was thought to affect the forecast of the shipping costs. This is believed to be due to the characteristics of the freight market. In the actual freight market, cargo transport volume decreases on rainy days. Since the data used in this study are the data of cargoes that have completed freight transportation, these market conditions do not appear.
+
+In future studies, we will generate and analyze meaningful data by changing the preprocessing method of environmental factors. In addition, other factors such as “highway fee” and “fuel cost” will be added to determine which environmental factors affect the shipping costs.

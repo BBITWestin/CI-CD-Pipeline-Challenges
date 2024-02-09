@@ -21,5 +21,7 @@ Here are the steps I took to set up my Azure Active Directory B2C demo app.
 
    2B. [Register a single-page application in Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/tutorial-register-spa)
 
+   - Note: web app tutorial had me generate an app secret but the spa tutorial did NOT. Come back to this later if you run into problems...
+
 3. Step 3
    - fdgffghfdhfgyhr5hfg

@@ -45,7 +45,7 @@ Use techniques to select the most relevant features to reduce model complexity a
 Split the data into training, validation, and test sets to evaluate the model's performance:
 
 - Use the training set to train the model.
-- The validation set is used to tune the [hyperparameters](https://www.geeksforgeeks.org/difference-between-model-parameters-vs-hyperparameters/?ref=header_search) such as learning rate.
+- The validation set is used to tune the [hyperparameters](https://www.geeksforgeeks.org/difference-between-model-parameters-vs-hyperparameters/?ref=header_search) such as learning rate or number of epochs.
 - The test set provides an unbiased evaluation of the final model fit. aka the model has the same preformace with test set 1 as it does with test set 2.
 
 Use cross-validation to ensure that the model's performance is consistent across different subsets of the data.

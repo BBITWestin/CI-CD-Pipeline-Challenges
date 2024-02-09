@@ -1,6 +1,6 @@
 # My Docs
 
-![Static Badge](https://img.shields.io/badge/------------%20HELLO%20WORLD!%20-------------8A2BE2.svg?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/------------%20HELLO%20WORLD%20-------------8A2BE2.svg?style=for-the-badge)
 
 [![Commits][last-commits-shield]][last-commits-url]
 [![Contributors][contributors-shield]][contributors-url]
@@ -23,6 +23,7 @@
 4. Open a Pull Request
 
 ## Links
+
 [Emojis](https://gist.github.com/rxaviers/7360908)
 
 [contributors-shield]: https://img.shields.io/github/contributors/BBITWestin/My-Docs.svg?style=for-the-badge

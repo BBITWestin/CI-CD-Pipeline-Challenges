@@ -9,7 +9,8 @@ Here are the steps I took to set up my Azure Active Directory B2C demo app.
    - If using the Ephemral subscription I have already registered Microsoft.AzureActiveDirectory in resource providers.
    - Note that you will also require `Tennant Creator` role, which you will NOT get unless ur sam... So ask sam...
      - Once the B2C tennant is created ask for the following roles under the newly created tennant:
-       - fdfmnsdk
+       - `Application Developer`
+       - `External ID User Flow Administrator`
      - If you were able to create the Tennant yourself than you will automatically be granted `global admin`.
 
 2. CAUTION: Azure considers a "web application" to be a traditional web application that performs most of the application logic on the server. So for our purposes this will be our .NET Core Web API!!! Our Frontend app on the other hand is considered a SPA (single page applications) for app registration purposes!!! We will need to regeister **BOTH** our React App as well as our .NET Core web api.

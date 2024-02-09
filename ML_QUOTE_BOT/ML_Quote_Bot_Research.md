@@ -95,11 +95,19 @@ This study was conducted using Python version 3.9. Python language-based TensorF
 
 ### MLR
 
+...
+
 ### DNN
+
+...
 
 ### XGBoost Regression
 
+...
+
 ### LightGBM
+
+...
 
 ### Model Comparison
 

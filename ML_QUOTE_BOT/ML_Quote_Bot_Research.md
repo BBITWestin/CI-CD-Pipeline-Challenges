@@ -16,8 +16,6 @@ This paper could be used to set the shipping costs on freight brokerage platform
 
 ## Intro
 
-Currently, the criteria for setting the shipping costs simply consider distance and vehicle tonnage.
-
 We present a method for setting the range of predicted fares considering realistic usage behaviors; the fares should be presented as a range rather than as a single value to the user.
 
 The machine learning algorithms we used were multiple linear regression (MLR), deep neural networks (DNNs), extreme gradient boosting (XGBoost) regression, and light gradient boosting machine (LightGBM) regression. LightGBM is a model that reduces the learning time compared to the XGBoost model.

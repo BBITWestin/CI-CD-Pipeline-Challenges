@@ -45,8 +45,17 @@ For my demo I forked the [todo-csharp-sql](https://github.com/azure-samples/todo
 5. Before following the steps listed in the read me it's important to remove `await db.Database.EnsureCreatedAsync();` in program.cs before deploying (`azd up` or pushing to main). This way you can use ef core migrations. See the [Remarks section here](https://learn.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.infrastructure.databasefacade.ensurecreatedasync?view=efcore-8.0) for more details on why the sample app choose to use `EnsureCreatedAsync()`.
    - You might need to comment out `await db.Database.EnsureCreatedAsync();` and then deploy before adding migrations and updating for the first time.
    - You will also need to remove the `Provision Infrastructure` _step_ in ./github/workflows/\*\*\*.yml before continueing.
-6. Now follow the `azd` steps to provision, deploy, and config the pipeline.
-7. When you're done testing for the day simply run `azd down`. _Azure sql databases are expensive to run_.
+6. I added the following snippet to `sqlserver.bicep` to overide the expensive default sql db pricing teir:
+
+   ```bicep
+   // sqlserver.bicep
+   sku: {
+     name: 'Free'
+   }
+   ```
+
+7. Now follow the `azd` steps to provision, deploy, and config the pipeline.
+8. When you're done testing for the day simply run `azd down`. _Azure sql databases are expensive to run_.
 
 I still have some more testing to get done to figure out exactly how everything is playing together in this sample app. But [my repo](https://github.com/BBITWestin/pipeline-demo) does in fact update the database on deployments automatically.
 

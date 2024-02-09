@@ -6,3 +6,11 @@ Here are the steps I took to set up my Azure Active Directory B2C demo app.
 
 1. [Tutorial: Create an Azure Active Directory B2C tenant](https://learn.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-tenant)
    - If using the Ephemral subscription I have already registered Microsoft.AzureActiveDirectory in resource providers.
+   - Note that you will also require `Tennant Creator` role, which you will NOT get unless ur sam... So ask sam...
+     - Once the B2C tennant is created ask for `application developer` role under the newly created tennant.
+     - If you were able to create the Tennant yourself than you will automatically be granted `global admin`.
+2. [Tutorial: Register a web application in Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/tutorial-register-applications)
+   - refr
+   - refr
+   - refr
+   - refr

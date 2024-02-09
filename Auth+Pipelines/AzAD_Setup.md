@@ -23,5 +23,6 @@ Here are the steps I took to set up my Azure Active Directory B2C demo app.
 
    - Note: web app tutorial had me generate an app secret but the spa tutorial did NOT. Come back to this later if you run into problems...
 
-3. Step 3
-   - fdgffghfdhfgyhr5hfg
+3. [Tutorial: Create user flows and custom policies in Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-user-flows?pivots=b2c-user-flow)
+
+- I selected `User Flow` which is the default policy type.

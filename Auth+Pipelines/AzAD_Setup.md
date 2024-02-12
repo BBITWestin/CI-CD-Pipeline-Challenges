@@ -4,6 +4,14 @@ Here are the steps I took to set up my Azure Active Directory B2C demo app.
 
 - The first thing I tried was [quickstart-web-app-dotnet](https://learn.microsoft.com/en-us/azure/active-directory-b2c/quickstart-web-app-dotnet), but was unsucessfull in getting the app to run. The problem I was running into was with the `Owin` dependancy which the project depends on. The project expects version 1.0.1 but [Owin](https://www.nuget.org/packages/Owin/1.0.0?_src=template) only has version 1.0.0 available and changing the dependancy to this version also didn't work. Since this sample app uses a .NET web app I'm going to skip over the quick start and follow the other tutorials which explain how to add Azure AD to an existing .NET web api.
 
+You might be able to get around some of the trouble spots I mention in `attempt 2` with `app admin` role. Without this role simply ask sam to grant api permissions for the application registration you are dealing with.
+
+Attempt 2 was completed without api permissions granted admin consent. Attempt 2 didn't rly work but was still a great way to introduce yourself to all the services within Azure B2C.
+
+For the first working demo see attempt 3. [ATTEMPT 3](##ATTEMPT-3)
+
+## ATTEMPT 2
+
 1. [Tutorial: Create an Azure Active Directory B2C tenant](https://learn.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-tenant)
 
    - If using the Ephemral subscription I have already registered Microsoft.AzureActiveDirectory in resource providers.
@@ -48,7 +56,23 @@ After signing up and being redirected to jwt.ms I got the following error:
 
 I'm going to ignore these errors since I followed the tutorials and hope it's just a problem with the testing feature in azure. So next up will be:
 
-- [Configure authentication in a sample single-page application by using Azure AD B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/configure-authentication-sample-spa-app)
-- [Enable authentication in your own web API by using Azure AD B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/enable-authentication-web-api?tabs=csharpclient)
+## ATTEMPT-3
 
-1. fsdfds
+- [Configure authentication in a sample single-page application by using Azure AD B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/configure-authentication-sample-spa-app)
+  - THIS TIME HAVE SAM GRANT ADMIN CONSENT TO MS GRAPH API PERMISSIONS WHEN REGISTERING APPS!
+  - Working demo can be found here.
+    - Run the Node.js web API
+      ```bash
+        cd active-directory-b2c-javascript-nodejs-webapi
+        npm install && npm update
+        node index.js
+      ```
+    - Run the Node.js web API
+      ```bash
+        cd ms-identity-b2c-javascript-spa
+        npm install && npm update
+        npm start
+      ```
+    - Go to `http://localhost:6420`
+
+## Next Steps

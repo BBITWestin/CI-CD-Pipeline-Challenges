@@ -8,7 +8,7 @@ You might be able to get around some of the trouble spots I mention in `attempt 
 
 Attempt 2 was completed without api permissions granted admin consent. Attempt 2 didn't rly work but was still a great way to introduce yourself to all the services within Azure B2C.
 
-For the first working demo see attempt 3. [ATTEMPT 3](##ATTEMPT-3)
+For the first working demo see attempt 3. [ATTEMPT 3](#ATTEMPT-3)
 
 ## ATTEMPT 2
 

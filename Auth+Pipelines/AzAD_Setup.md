@@ -2,15 +2,16 @@
 
 Here are the steps I took to set up my Azure Active Directory B2C demo app.
 
+For the first working demo see [ATTEMPT 3](#ATTEMPT-3).
+
+## ATTEMPT 1
+
 - The first thing I tried was [quickstart-web-app-dotnet](https://learn.microsoft.com/en-us/azure/active-directory-b2c/quickstart-web-app-dotnet), but was unsucessfull in getting the app to run. The problem I was running into was with the `Owin` dependancy which the project depends on. The project expects version 1.0.1 but [Owin](https://www.nuget.org/packages/Owin/1.0.0?_src=template) only has version 1.0.0 available and changing the dependancy to this version also didn't work. Since this sample app uses a .NET web app I'm going to skip over the quick start and follow the other tutorials which explain how to add Azure AD to an existing .NET web api.
 
-You might be able to get around some of the trouble spots I mention in `attempt 2` with `app admin` role. Without this role simply ask sam to grant api permissions for the application registration you are dealing with.
-
-Attempt 2 was completed without api permissions granted admin consent. Attempt 2 didn't rly work but was still a great way to introduce yourself to all the services within Azure B2C.
-
-For the first working demo see attempt 3. [ATTEMPT 3](#ATTEMPT-3)
-
 ## ATTEMPT 2
+
+- This attempt was completed without api permissions granted admin consent. This attempt didn't work with testing user flows but I left my notes here anyways because it was still a great way to introduce yourself to all the services within Azure B2C.
+  - You might be able to get around some of the trouble spots I mention with `app admin` role. Without this role simply ask sam to grant api permissions for the application registration you are dealing with.
 
 1. [Tutorial: Create an Azure Active Directory B2C tenant](https://learn.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-tenant)
 
@@ -54,13 +55,13 @@ Now lets test the user flow with the web app registration we made.
 After signing up and being redirected to jwt.ms I got the following error:
 ![error](error.png)
 
-I'm going to ignore these errors since I followed the tutorials and hope it's just a problem with the testing feature in azure. So next up will be:
+I'm going to ignore these errors since I followed the tutorials and hope it's just a problem with the testing feature in azure.
 
-## ATTEMPT-3
+## ATTEMPT 3
 
 - [Configure authentication in a sample single-page application by using Azure AD B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/configure-authentication-sample-spa-app)
   - THIS TIME HAVE SAM GRANT ADMIN CONSENT TO MS GRAPH API PERMISSIONS WHEN REGISTERING APPS!
-  - Working demo can be found here.
+  - Working demo can be found here: [BBITWestin/auth-sample-app1](https://github.com/BBITWestin/auth-sample-app1)
     - Run the Node.js web API
       ```bash
         cd active-directory-b2c-javascript-nodejs-webapi
@@ -75,4 +76,18 @@ I'm going to ignore these errors since I followed the tutorials and hope it's ju
       ```
     - Go to `http://localhost:6420`
 
-## Next Steps
+# Next Steps... Enable authentication in **OUR** projects.
+
+The demo above proves we can get away with setting up Azure AD B2C with `Application Developer`, `External ID User Flow Administrator`, and Sam (`Application Admin`). Now that we've gone through the process of registering applications and creating user flows lets try and apply this process to an existing frontend / backend repo. For this demo I created a new fork from [todo-csharp-sql](https://github.com/azure-samples/todo-csharp-sql/tree/main/) Azure Sample App (_same as pipeline demo_). I'll first be going through the tutorial below:
+
+[Enable authentication in your own React Application by using Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/enable-authentication-react-spa-app).
+
+Watch me get lost in the MS docs:
+
+1. I decided to keep as much of the react template code as possible and instead created a MSAL wrapper componenet in place of App.js. This means I didn't copy and **replace** as the guide suggest but added the MSAL stuff that looked important...
+
+2. So it turns out if you follow the guide you'll actually still be missing a ton of required files used by the snippets so I ended up just cloning the repo they were referencing and replacing my ./web/src folder with the new /src folder.
+
+3. Nevermind!!!! The files they reference are from MULTIPLE REPOS!!!! WOWOW!! kms...
+
+4. Alright time to take it super slow, step by step, and figure out the what the important bits are from the bloated snippets this tutorial wants us to use.

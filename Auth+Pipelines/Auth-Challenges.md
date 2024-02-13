@@ -72,10 +72,6 @@ Herzog needs my help on a load for the day. He gives me permission in some admin
 
 - Less scalable: When the number of users is high, how can we ensure were managing permissions for each user correctly.
 
-### 4. Compare
-
-![Compare](https://static-assets.amplication.com/blog/choosing-between-role-based-vs-claims-based-vs-permission-based-access-control-mechanism/1.png)
-
 ### Other Notes
 
 We would be best off setting something up to keep logs of any time a role, claim, or permission is updated.
@@ -97,11 +93,7 @@ Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 [Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/overview) provides business-to-customer identity as a service.
 
 - [Technical and feature overview of Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/technical-overview)
-
-#### Features
-
-- Custom-branded identity solution (Full control over UI)
-- Provides a directory that can hold 100 [custom attributes](https://learn.microsoft.com/en-us/azure/active-directory-b2c/user-profile-attributes) per user.
+- Azure AD seems to lack any sort of dedicated method of permission based access conrol or even claims based. Although they do offer custom user attibutes and claims leaving it up to us. Its questionable if we can integrate these custom attibutes into our app, meaning how can user1A manage user1B's custom atributes in our frontend? `More research needed`.
 
 ### Auth0
 
@@ -123,10 +115,17 @@ Assuming 10,000 active monthly users Azure AD scales much cheaper at $0.01625/Mo
 
 ### Demo
 
-Follow the steps in my [AzAd_Setup](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/AzAD_Setup.md) doc to get a feel for how to implement Azure AD B2C.
+#### Azure AD Demo
+
+Follow the steps in my [AzAd_Setup](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/AzAD_Setup.md) doc to get a feel for how to implement Azure AD B2C. I tried my best to document every step I took and the problems (along with solutions) I encountered along the way, but it's still gonna be a pain to recreate, good luck.
+
+#### Auth0 Demo
 
 ---
 
 #### Links
 
+[Become best friends with Azure AD B2C (My AzAd_Setup)](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/AzAD_Setup.md)
+Azure AD [pricing](https://azure.microsoft.com/en-us/pricing/details/active-directory-external-identities/)
+Auth0 [pricing](https://auth0.com/pricing)
 [How to Choose the Right Type of Access Control for your Project](https://amplication.com/blog/choosing-between-role-based-vs-claims-based-vs-permission-based-access-control-mechanism)

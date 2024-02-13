@@ -80,6 +80,8 @@ I'm going to ignore these errors since I followed the tutorials and hope it's ju
 
 The demo above proves we can get away with setting up Azure AD B2C with `Application Developer`, `External ID User Flow Administrator`, and Sam (`Application Admin`). Now that we've gone through the process of registering applications and creating user flows lets try and apply this process to an existing frontend / backend repo. For this demo I created a new fork from [todo-csharp-sql](https://github.com/azure-samples/todo-csharp-sql/tree/main/) Azure Sample App (_same as pipeline demo_). I'll first be going through the tutorial below:
 
+## Enable authentication in your own React Application
+
 [Enable authentication in your own React Application by using Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/enable-authentication-react-spa-app).
 
 Watch me get lost in the MS docs:
@@ -108,11 +110,26 @@ Lets try this again... Reverted back to new fork of _todo-csharp-sql_.
 
 Now time to update our authConfig.js file. To do this we first need to create our app registrations and user flows.
 
-1. [Configure authentication in a sample React single-page application by using Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/configure-authentication-sample-react-spa-app#31-configure-the-react-sample)
+- [Configure authentication in a sample React single-page application by using Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/configure-authentication-sample-react-spa-app#31-configure-the-react-sample)
 
-Notes:
+  - MAKE SURE YOU GO BACK THROUGH AND ADD YOUR REDIRECT URLS IN THE SPA APP REGISTRATION. It may take 10-20 minutes to update... Also try clearing histroy/cookies and try again after making any updates.
+    ![redirect](redirect.png)
+  - If this still doesn't work then try deleting the `Single-page application` platform and adding a new one with the correct redirect url.
+    ![redirect](redirectConfirm.png)
+  - As an example I deleted the platform and then added localhost:3000 for testing purposes for now... More research needed to fully understand the limitations of the redirect URI's.
+  - This also didn't work right away so you might just need to wait 10-20 minutes.
 
-- MAKE SURE YOU GO BACK THROUGH AND ADD YOUR REDIRECT URLS IN THE SPA APP REGISTRATION
-  ![redirect](redirect.png)
+Now before we move onto enabling auth in our backend lets explore some of the other features Azure AD B2C has to offer. Some of the things I want to explore are:
+
+- Page layouts and Custom Page layouts
+- **Claims** / **Permission** based access control potential with custom `Application claims` and `User attributes`?
+
+Some of the other things that seem a whole lot less exciting but we should prob i guess kinda look into is custom policies / user flows... uhg. as well as Identity Providers like _sign in with google_. This is already painful enough.
+
+### Page layouts and Custom Page layouts
+
+### Claims / Permission based access control potential
+
+## Enable authentication in your own web API
 
 2. [Enable authentication in your own web API by using Azure AD B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/enable-authentication-web-api?tabs=csharpclient)

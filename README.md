@@ -9,6 +9,26 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 
+<html>
+  <body>
+    <script>
+      (async () => {
+        const response = await fetch('https://api.github.com/repos/BBITWestin/https://bbitwestin.github.io//contents/');
+        const data = await response.json();
+        let htmlString = '<ul>';
+        
+        for (let file of data) {
+          htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
+        }
+
+        htmlString += '</ul>';
+        document.getElementsByTagName('body')[0].innerHTML = htmlString;
+      })()
+    </script>
+
+  <body>
+</html>
+
 ## Contributing
 
 1. Fork the Project

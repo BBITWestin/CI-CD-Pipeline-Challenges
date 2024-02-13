@@ -1,10 +1,10 @@
 # Project Portal: Authorization Schema
 
-Initially put thunk by boss man Jacob.
-
 This document explains the authorization schema goals for WaaS then explores what implementation options Azure AD B2C and Auth0 offer for Role based, Claims based, and Permission based access control.
 
 ## Description & Goals for Authorization Schema
+
+Initially put thunk by boss man Jacob.
 
 - We want individual and team-based authorization at the `branch`, `customer`, and `load` level.
 - `Branches` have `customers`. `Customers` have `loads`.
@@ -38,9 +38,25 @@ This document explains the authorization schema goals for WaaS then explores wha
     Super Admin
 
     - Ability to set policies for the organization.
-    - Organization level access - not related to branch, customer, and load level access. But they have admin access for everything.
+    - Organization level access: not related to branch, customer, and load level access. But they have admin access for everything.
     - Example: Brent and Matt would be Super Admins for the BBI Logistics organization.
 
-## Azure AD B2C Features
+## Azure AD B2C Features... for use case
 
-## Auth0 Features
+- stuff1
+- stuff2
+- stuff3
+
+#### Azure AD Demo
+
+Follow the steps in my [AzAd_Setup](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/AzAD_Setup.md) doc to get a feel for how to implement Azure AD B2C. I tried my best to document every step I took and the problems (along with solutions) I encountered along the way, but it's still gonna be a pain to recreate, good luck.
+
+## Auth0 Features... for use case
+
+- stuff1
+- stuff2
+- stuff3
+
+#### Auth0 Demo
+
+...Bpaid?!

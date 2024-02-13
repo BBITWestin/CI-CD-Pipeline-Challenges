@@ -37,7 +37,7 @@ For the first working demo see [ATTEMPT 3](#ATTEMPT-3).
 
 - I selected `User Flow` which is the default policy type.
 - Didn't work...
-  - ![error](sorry.png)
+  - ![error](./images/sorry.png)
 - I can't remember exactly which setting it was that I changed but try the following:
   - Go to app registrations -> web app / spa -> Authentication. Ensure you have `implicit grant` enabled.
   - Also under `Grant types` there might be an error/warning message about your redirect url. Click on it then select your redirect url and finally **configure**.
@@ -50,10 +50,10 @@ For the first working demo see [ATTEMPT 3](#ATTEMPT-3).
 Takeaway: Use MSAL 2.0+ and DON'T use Implicit grant. I just didn't find this recomendation until afterwards.
 
 Now lets test the user flow with the web app registration we made.
-![signup](signup.png)
+![signup](./images/signup.png)
 
 After signing up and being redirected to jwt.ms I got the following error:
-![error](error.png)
+![error](./images/error.png)
 
 I'm going to ignore these errors since I followed the tutorials and hope it's just a problem with the testing feature in azure.
 
@@ -113,9 +113,9 @@ Now time to update our authConfig.js file. To do this we first need to create ou
 - [Configure authentication in a sample React single-page application by using Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/configure-authentication-sample-react-spa-app#31-configure-the-react-sample)
 
   - MAKE SURE YOU GO BACK THROUGH AND ADD YOUR REDIRECT URLS IN THE SPA APP REGISTRATION. It may take 10-20 minutes to update... Also try clearing histroy/cookies and try again after making any updates.
-    ![redirect](redirect.png)
+    ![redirect](./images/redirect.png)
   - If this still doesn't work then try deleting the `Single-page application` platform and adding a new one with the correct redirect url.
-    ![redirect](redirectConfirm.png)
+    ![redirectConfirm](./images/redirectConfirm.png)
   - As an example I deleted the platform and then added localhost:3000 for testing purposes for now... More research needed to fully understand the limitations of the redirect URI's.
   - This also didn't work right away so you might just need to wait 10-20 minutes.
 

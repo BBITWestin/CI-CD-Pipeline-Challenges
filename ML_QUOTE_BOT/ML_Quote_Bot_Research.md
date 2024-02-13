@@ -35,7 +35,7 @@ R-squared was used as the performance evaluation index for the predictive model.
 
 According to the learning method, machine learning is categorized as supervised learning and unsupervised learning. Supervised learning is a learning algorithm that learns data with input and output values, and it predicts output values for unseen data or future data. It is used for classification or regression analysis.
 
-![ML_Algorithms](ML_Algorithms.png)
+![ML_Algorithms](./images/ML_Algorithms.png)
 
 ## Data Collection and Preprocessing
 
@@ -65,7 +65,7 @@ The interquartile range (IQR) was used to remove outliers in the data. Outlier r
 
 After applying two methods for managing missing values, we compared which method was more useful. Before the processing of missing values, factors for which more than 50% of the data were missing were determined to be factors that did not have a great influence on the prediction and were, thus, removed. We removed 20 factors, including “load/unload name address,” “summary,” and “order number.” For the missing value treatment, listwise deletion and the mean imputation were used, and a dataset was created to which each treatment for missing values was applied. The listwise deletion removed all data with missing values, and the mean imputation replaced the missing values with the average value of each factor.
 
-![alt text](ML_Missing Data.png)
+![alt text](./images/ML_Missing Data.png)
 
 ## Derivation of Key Factors
 
@@ -79,7 +79,7 @@ In this study, independent variables with a correlation coefficient of 0.1 or hi
 
 The stepwise method was one of the methods used for selecting several independent variables to be included in the regression model. It is a method that is used to find the variable constituting the optimal regression model by repeating the addition and removal of variables. The selected variable was judged to be a strong predictor in the prediction model.
 
-![Independent variables](Independent_vars.png)
+![Independent variables](./images/Independent_vars.png)
 
 ## Model Construction and Analysis Results
 
@@ -89,7 +89,7 @@ Min–max normalization, which converts all continuous variable data to values b
 
 For the suitability of the model, 80% of the collected data were allocated to a training set and 20% to a test set, and the datasets were then used for the model construction and verification. At this time, to derive the cost range, the training set was divided into 30 folds through K-fold cross-validation, and 30 predicted values were derived by predicting the test set for each iteration. For each iteration, 29 training sets and 1 validation set were used. After that, the model was trained on the training set of each fold, and the process of predicting with the test set was repeated until 30 predicted values were derived. Afterward, the maximum and minimum values in the confidence interval were determined as the upper and lower limits of the prediction interval to estimate the predicted cost range. Overall configuration of a dataset for range prediction is shown in Figure 2.
 
-![k_fold](k_fold.png)
+![k_fold](./images/k_fold.png)
 
 This study was conducted using Python version 3.9. Python language-based TensorFlow and the scikit-learn machine learning algorithms were also used.
 
@@ -117,13 +117,13 @@ The time required for model learning is also an important factor to consider for
 
 Considering both the speed and performance among the machine learning models, the LightGBM model was judged to be the most suitable for predicting the shipping cost. If the model performance is optimized in the future, the accuracy of the model could be further increased.
 
-![model_comparison](model_comparison.png)
+![model_comparison](./images/model_comparison.png)
 
 ### Variable Importance
 
 Another purpose of this study was to derive factors that affect the cost setting. In order to derive these factors, the variable with the greatest contribution to the prediction of the shipping cost was identified using Shapley Additive exPlanations (SHAP).
 
-![variable_importance](variable_importance.png)
+![variable_importance](./images/variable_importance.png)
 
 The factors that make a high contribution to the shipping cost prediction are “linear distance,” “actual distance,” “freight weight,” and “vehicle tonnage,” which are highly related to transportation distance and freight characteristics. In particular, “linear distance” showed a high contribution of greater than 50%. It was judged that “linear distance” has a greater influence than “actual distance” in determining the shipping cost.
 

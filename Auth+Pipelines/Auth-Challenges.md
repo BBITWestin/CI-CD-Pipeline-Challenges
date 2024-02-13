@@ -113,19 +113,13 @@ Assuming 10,000 active monthly users Azure AD scales much cheaper at $0.01625/Mo
 
 ![alt text](Azure_Auth0_Pricing.png)
 
-### Demo
+### Links
 
-#### Azure AD Demo
+- [Become best friends with Azure AD B2C (My AzAd_Setup)](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/AzAD_Setup.md)
+- Azure AD [pricing](https://azure.microsoft.com/en-us/pricing/details/active-directory-external-identities/)
+- Auth0 [pricing](https://auth0.com/pricing)
+- [How to Choose the Right Type of Access Control for your Project](https://amplication.com/blog/choosing-between-role-based-vs-claims-based-vs-permission-based-access-control-mechanism)
 
-Follow the steps in my [AzAd_Setup](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/AzAD_Setup.md) doc to get a feel for how to implement Azure AD B2C. I tried my best to document every step I took and the problems (along with solutions) I encountered along the way, but it's still gonna be a pain to recreate, good luck.
+# Next steps
 
-#### Auth0 Demo
-
----
-
-#### Links
-
-[Become best friends with Azure AD B2C (My AzAd_Setup)](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/AzAD_Setup.md)
-Azure AD [pricing](https://azure.microsoft.com/en-us/pricing/details/active-directory-external-identities/)
-Auth0 [pricing](https://auth0.com/pricing)
-[How to Choose the Right Type of Access Control for your Project](https://amplication.com/blog/choosing-between-role-based-vs-claims-based-vs-permission-based-access-control-mechanism)
+Choose between [Azure AD B2C vs Auth0 for OUR use case](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/Authorization_Schema.md).

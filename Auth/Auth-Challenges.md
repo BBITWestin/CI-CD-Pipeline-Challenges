@@ -123,4 +123,4 @@ Assuming 10,000 active monthly users Azure AD scales much cheaper at $0.01625/Mo
 
 # Next steps
 
-Choose between [Azure AD B2C vs Auth0 for OUR use case](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/Authorization_Schema.md).
+Choose between [Azure AD B2C vs Auth0 for OUR use case](https://github.com/BBITWestin/My-Docs/blob/main/Auth/Authorization_Schema.md).

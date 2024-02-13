@@ -5,7 +5,7 @@ Trevor Westin - 2/8/2024
 ## Challenges
 
 - Last Week
-  - [How can we synchronize deployment of updates to Frontend, Backend, and Database?](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/PipelineConcurrency.md)
+  - [How can we synchronize deployment of updates to Frontend, Backend, and Database?](https://github.com/BBITWestin/My-Docs/blob/main/Pipelines/PipelineConcurrency.md)
 - This Week
   - Once deployments are live, how to get user's frontend to udpate without asking them to refresh their web page.
   - Pipelines for Bugs and Features?

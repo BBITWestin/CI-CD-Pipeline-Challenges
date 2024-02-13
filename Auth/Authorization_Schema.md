@@ -2,7 +2,7 @@
 
 2/13/2024 - @BBITWestin
 
-This document explains the authorization schema goals for WaaS then explores what implementation options Azure AD B2C and Auth0 offer for [Role based, Claims based, and Permission based access control](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/Auth-Challenges.md).
+This document explains the authorization schema goals for WaaS then explores what implementation options Azure AD B2C and Auth0 offer for [Role based, Claims based, and Permission based access control](https://github.com/BBITWestin/My-Docs/blob/main/Auth/Auth-Challenges.md).
 
 ## Description & Goals for Authorization Schema
 
@@ -51,7 +51,7 @@ Initially put thunk by boss man @BBIJAllen.
 
 #### Azure AD Demo
 
-Follow the steps in my [AzAd_Setup](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/AzAD_Setup.md) doc to get a feel for how to implement Azure AD B2C. I tried my best to document every step I took and the problems (along with solutions) I encountered along the way, but it's still gonna be a pain to recreate, good luck.
+Follow the steps in my [AzAd_Setup](https://github.com/BBITWestin/My-Docs/blob/main/Auth/AzAD_Setup.md) doc to get a feel for how to implement Azure AD B2C. I tried my best to document every step I took and the problems (along with solutions) I encountered along the way, but it's still gonna be a pain to recreate, good luck.
 
 ## Auth0 Features... for use case
 
@@ -65,4 +65,4 @@ Follow the steps in my [AzAd_Setup](https://github.com/BBITWestin/My-Docs/blob/m
 
 ## Links
 
-- [Become best friends with Azure AD B2C (My AzAd_Demo_Walkthrough)](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/AzAD_Setup.md)
+- [Become best friends with Azure AD B2C (My AzAd_Demo_Walkthrough)](https://github.com/BBITWestin/My-Docs/blob/main/Auth/AzAD_Setup.md)

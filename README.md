@@ -9,25 +9,40 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 
-<html>
-  <body>
-    <script>
-      (async () => {
-        const response = await fetch('https://api.github.com/repos/BBITWestin/https://bbitwestin.github.io//contents/');
-        const data = await response.json();
-        let htmlString = '<ul>';
-        
-        for (let file of data) {
-          htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
-        }
-
-        htmlString += '</ul>';
-        document.getElementsByTagName('body')[0].innerHTML = htmlString;
-      })()
-    </script>
-
-  <body>
-</html>
+```
+│   README.md
+│
+├───Auth
+│   │   Auth-Challenges.md
+│   │   Authorization_Schema.md
+│   │   AzAD_Setup.md
+│   │
+│   └───images
+│           Azure_Auth0_Pricing.png
+│           error.png
+│           redirect.png
+│           redirectConfirm.png
+│           signup.png
+│           sorry.png
+│
+├───ML_QUOTE_BOT
+│   │   ML_Quote_Bot_init.md
+│   │   ML_Quote_Bot_Research.md
+│   │
+│   └───images
+│           Independent_vars.png
+│           k_fold.png
+│           ML_Algorithms.png
+│           ML_Missing Data.png
+│           model_comparison.png
+│           variable_importance.png
+│
+└───Pipelines
+    │   PipelineConcurrency.md
+    │   RefreshClientOnDeployment.md
+    │
+    └───images
+```
 
 ## Contributing
 

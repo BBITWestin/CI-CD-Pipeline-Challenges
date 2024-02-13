@@ -190,7 +190,7 @@ In some cases, especially for significant database changes, it may be more pract
 
 ## Later On:
 
-- Blue Green strategy working demo for entire CI/CD pipeline.
+- Blue Green strategy working demo for entire CI/CD pipeline
   - 1 Dev, 2 Prod (green/blue).
   - Rollback demo
-- Rollback demo independant of Blue Green deployment.
+- Rollback demo independant of Blue Green deployment

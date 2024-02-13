@@ -2,7 +2,7 @@
 
 2/13/2024 - @BBITWestin
 
-This document explains the authorization schema goals for WaaS then explores what implementation options Azure AD B2C and Auth0 offer for Role based, Claims based, and Permission based access control.
+This document explains the authorization schema goals for WaaS then explores what implementation options Azure AD B2C and Auth0 offer for [Role based, Claims based, and Permission based access control](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/Auth-Challenges.md).
 
 ## Description & Goals for Authorization Schema
 
@@ -12,7 +12,7 @@ Initially put thunk by boss man @BBIJAllen.
 - `Branches` have `customers`. `Customers` have `loads`.
   - If you have admin access at the branch level, then you have admin access to all of the branch’s customers and Admin access to all those customers’ loads.
   - If you have admin access at the customer level, then you have admin access to all of the customer’s loads.
-- We are likely sticking to the "assignment" relationship between loads and customers, so multiple different customers can be on one load. When that happens people with customer level access for different customers on the same load will have their respective access to the shared load.
+- We are likely sticking to the _assignment relationship_ between loads and customers, so multiple different customers can be on one load. When that happens people with customer level access for different customers on the same load will have their respective access to the shared load.
 - Branches and customers will likely be linked via a joinder table so branches can share customers. Loads will likely hold a relationship to branch so we can parse loads to the branch when the customer is shared between multiple branches.
 - Users can be assigned to teams. Then those teams can be given branch, customer, and load level access.
 - Super admins can set policies on what admin and default users can do. Examples:
@@ -62,3 +62,7 @@ Follow the steps in my [AzAd_Setup](https://github.com/BBITWestin/My-Docs/blob/m
 #### Auth0 Demo
 
 ...Bpaid?!
+
+## Links
+
+- [Become best friends with Azure AD B2C (My AzAd_Demo_Walkthrough)](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/AzAD_Setup.md)

@@ -1,6 +1,6 @@
 # User Auth Challenges
 
-2/16/2024 - @BBITWestin & @BBIIWest
+2/16/2024 - @BBITWestin & ~~@BBIIWest~~ (YOU GOTTA EARNNNNN IT)
 
 ![Trevor & Ian](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnVuM3gxcGMyb3NzamZ3bjR1ZjlkeGd2ZnQzMjJ6ODZyeHB2amRoNiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/4uUnISbiiBAHmwHi4d/giphy.gif)
 
@@ -117,7 +117,6 @@ Assuming 10,000 active monthly users Azure AD scales much cheaper at $0.01625/Mo
 
 ### Links
 
-- [Become best friends with Azure AD B2C (My AzAd_Setup)](https://github.com/BBITWestin/My-Docs/blob/main/Auth%2BPipelines/AzAD_Setup.md)
 - Azure AD [pricing](https://azure.microsoft.com/en-us/pricing/details/active-directory-external-identities/)
 - Auth0 [pricing](https://auth0.com/pricing)
 - [How to Choose the Right Type of Access Control for your Project](https://amplication.com/blog/choosing-between-role-based-vs-claims-based-vs-permission-based-access-control-mechanism)

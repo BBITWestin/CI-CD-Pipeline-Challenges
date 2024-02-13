@@ -1,6 +1,8 @@
 # User Auth Challenges
 
-2/8/2024
+2/16/2024 - @BBITWestin & @BBIIWest
+
+![Trevor & Ian](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnVuM3gxcGMyb3NzamZ3bjR1ZjlkeGd2ZnQzMjJ6ODZyeHB2amRoNiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/4uUnISbiiBAHmwHi4d/giphy.gif)
 
 ## Challenges
 
@@ -111,7 +113,7 @@ Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 
 Assuming 10,000 active monthly users Azure AD scales much cheaper at $0.01625/Monthly Active Users for Premium P2 (highest) vs Auth0's $0.16 / MAU for B2C (PROFESSIONAL) or $0.07 / MAU for B2C (ESSENTIALS).
 
-![alt text](Azure_Auth0_Pricing.png)
+![alt text](./images/Azure_Auth0_Pricing.png)
 
 ### Links
 

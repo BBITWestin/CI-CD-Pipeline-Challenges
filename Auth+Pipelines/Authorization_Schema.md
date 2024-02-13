@@ -1,10 +1,12 @@
 # Project Portal: Authorization Schema
 
+2/13/2024 - @BBITWestin
+
 This document explains the authorization schema goals for WaaS then explores what implementation options Azure AD B2C and Auth0 offer for Role based, Claims based, and Permission based access control.
 
 ## Description & Goals for Authorization Schema
 
-Initially put thunk by boss man Jacob.
+Initially put thunk by boss man @BBIJAllen.
 
 - We want individual and team-based authorization at the `branch`, `customer`, and `load` level.
 - `Branches` have `customers`. `Customers` have `loads`.

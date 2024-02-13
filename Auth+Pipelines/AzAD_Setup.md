@@ -91,3 +91,28 @@ Watch me get lost in the MS docs:
 3. Nevermind!!!! The files they reference are from MULTIPLE REPOS!!!! WOWOW!! kms...
 
 4. Alright time to take it super slow, step by step, and figure out the what the important bits are from the bloated snippets this tutorial wants us to use.
+
+Lets try this again... Reverted back to new fork of _todo-csharp-sql_.
+
+1. Skip any edits to index.html
+2. Copy ALL of [authConfig.js](). We'll come back to this in a bit to edit the policy names and links.
+3. Update index.tsx to .jsx and copy my changes: [index.jsx]().
+4. Update App.tsx to .jsx and copy my changes: [App.jsx]().
+5. Copy ALL of [claimUtils.js]() into a new _./utils_ folder.
+6. Optionally copy [Home.jsx]() into pages and uncomment this route in App.jsx
+   - This also requires you to copy IdTokenData
+7. In [layout.tsx]() replace `<Routes>...</Routes>` with `{children}`.
+8. Copy [NavigationBar.jsx]()...
+9. Copy [fetch.js]()...
+10. There might be some ESLint rules you have to fix / disable before hosting.
+
+Now time to update our authConfig.js file. To do this we first need to create our app registrations and user flows.
+
+1. [Configure authentication in a sample React single-page application by using Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/configure-authentication-sample-react-spa-app#31-configure-the-react-sample)
+
+Notes:
+
+- MAKE SURE YOU GO BACK THROUGH AND ADD YOUR REDIRECT URLS IN THE SPA APP REGISTRATION
+  ![redirect](redirect.png)
+
+2. [Enable authentication in your own web API by using Azure AD B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/enable-authentication-web-api?tabs=csharpclient)

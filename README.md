@@ -2,20 +2,29 @@
 
 VIEW ON GITHUB PAGES!!! => [https://bbitwestin.github.io](https://bbitwestin.github.io/)
 
-│ README.md
+![Static Badge](https://img.shields.io/badge/------------%20HELLO%20WORLD%20-------------8A2BE2.svg?style=for-the-badge)
+[![Commits][last-commits-shield]][last-commits-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Issues][issues-shield]][issues-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+
+```
+│   README.md
 │
 ├───[Auth](https://github.com/BBITWestin/BBITWestin.github.io/tree/main/Auth)
-│ │ [Auth-Challenges.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Auth-Challenges.md)
-│ │ [Authorization_Schema.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Authorization_Schema.md)
-│ │ [AzAD_Setup.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/AzAD_Setup.md)
+│   │   [Auth-Challenges.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Auth-Challenges.md)
+│   │   [Authorization_Schema.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Authorization_Schema.md)
+│   │   [AzAD_Setup.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/AzAD_Setup.md)
 │
 ├───[ML_QUOTE_BOT](https://github.com/BBITWestin/BBITWestin.github.io/tree/main/ML_QUOTE_BOT)
-│ │ [ML_Quote_Bot_init.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/ML_QUOTE_BOT/ML_Quote_Bot_init.md)
-│ │ [ML_Quote_Bot_Research.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/ML_QUOTE_BOT/ML_Quote_Bot_Research.md)
+│   │   [ML_Quote_Bot_init.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/ML_QUOTE_BOT/ML_Quote_Bot_init.md)
+│   │   [ML_Quote_Bot_Research.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/ML_QUOTE_BOT/ML_Quote_Bot_Research.md)
 │
-├───[Pipelines](https://github.com/BBITWestin/BBITWestin.github.io/tree/main/Pipelines)
-│ │ [PipelineConcurrency.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Pipelines/PipelineConcurrency.md)
-│ │ [RefreshClientOnDeployment.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Pipelines/RefreshClientOnDeployment.md)
+└───[Pipelines](https://github.com/BBITWestin/BBITWestin.github.io/tree/main/Pipelines)
+    │   [PipelineConcurrency.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Pipelines/PipelineConcurrency.md)
+    │   [RefreshClientOnDeployment.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Pipelines/RefreshClientOnDeployment.md)
+```
 
 ## Contributing
 
@@ -33,13 +42,6 @@ VIEW ON GITHUB PAGES!!! => [https://bbitwestin.github.io](https://bbitwestin.git
 ## Links
 
 [Emojis](https://gist.github.com/rxaviers/7360908)
-
-![Static Badge](https://img.shields.io/badge/------------%20HELLO%20WORLD%20-------------8A2BE2.svg?style=for-the-badge)
-[![Commits][last-commits-shield]][last-commits-url]
-[![Contributors][contributors-shield]][contributors-url]
-[![Issues][issues-shield]][issues-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
 
 [contributors-shield]: https://img.shields.io/github/contributors/BBITWestin/My-Docs.svg?style=for-the-badge
 [contributors-url]: https://github.com/BBITWestin/My-Docs/graphs/contributors

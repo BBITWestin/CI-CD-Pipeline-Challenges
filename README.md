@@ -2,22 +2,20 @@
 
 VIEW ON GITHUB PAGES!!! => [https://bbitwestin.github.io](https://bbitwestin.github.io/)
 
-```
-│   README.md
+│ README.md
 │
 ├───[Auth](https://github.com/BBITWestin/BBITWestin.github.io/tree/main/Auth)
-│   │   [Auth-Challenges.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Auth-Challenges.md)
-│   │   [Authorization_Schema.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Authorization_Schema.md)
-│   │   [AzAD_Setup.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/AzAD_Setup.md)
+│ │ [Auth-Challenges.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Auth-Challenges.md)
+│ │ [Authorization_Schema.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Authorization_Schema.md)
+│ │ [AzAD_Setup.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/AzAD_Setup.md)
 │
 ├───[ML_QUOTE_BOT](https://github.com/BBITWestin/BBITWestin.github.io/tree/main/ML_QUOTE_BOT)
-│   │   [ML_Quote_Bot_init.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/ML_QUOTE_BOT/ML_Quote_Bot_init.md)
-│   │   [ML_Quote_Bot_Research.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/ML_QUOTE_BOT/ML_Quote_Bot_Research.md)
+│ │ [ML_Quote_Bot_init.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/ML_QUOTE_BOT/ML_Quote_Bot_init.md)
+│ │ [ML_Quote_Bot_Research.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/ML_QUOTE_BOT/ML_Quote_Bot_Research.md)
 │
-└───[Pipelines](https://github.com/BBITWestin/BBITWestin.github.io/tree/main/Pipelines)
-    │   [PipelineConcurrency.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Pipelines/PipelineConcurrency.md)
-    │   [RefreshClientOnDeployment.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Pipelines/RefreshClientOnDeployment.md)
-```
+├───[Pipelines](https://github.com/BBITWestin/BBITWestin.github.io/tree/main/Pipelines)
+│ │ [PipelineConcurrency.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Pipelines/PipelineConcurrency.md)
+│ │ [RefreshClientOnDeployment.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Pipelines/RefreshClientOnDeployment.md)
 
 ## Contributing
 

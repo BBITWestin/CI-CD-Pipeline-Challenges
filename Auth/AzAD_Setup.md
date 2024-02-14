@@ -135,3 +135,39 @@ Some of the other things that seem a whole lot less exciting but we should prob 
 ## Enable authentication in your own web API
 
 2. [Enable authentication in your own web API by using Azure AD B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/enable-authentication-web-api?tabs=csharpclient)
+
+- This tutorial sucks ass and does some other weird stuff with a .NET web frontend...
+- Heres the rundown...
+
+1. `dotnet add package Microsoft.Identity.Web`
+2. Add the following snippets to Program.cs
+
+   ```c#
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
+    using Microsoft.Identity.Web;
+    .
+    .
+    .
+    // Adds Microsoft Identity platform (Azure AD B2C) support to protect this Api
+    builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                  .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAdB2C"));
+
+    builder.Services.Configure<JwtBearerOptions>(
+      JwtBearerDefaults.AuthenticationScheme, options =>
+      {
+          options.TokenValidationParameters.NameClaimType = "name";
+      });
+    // End of the Microsoft Identity platform block
+    .
+    .
+    .
+    app.UseAuthentication();
+    app.UseAuthorization();
+   ```
+
+3. If you're using controllers then also make sure you have `builder.Services.AddControllers();` and `app.MapControllers();`
+4. After adding the controllers you might run into an issue with namespace vs class names in `TodoDb.cs` Simply add the namespace path (i think this is the right term) before the class name like so:
+   ```c#
+   public DbSet<SimpleTodo.Api.TodoItem> Items => Set<SimpleTodo.Api.TodoItem>();
+   public DbSet<SimpleTodo.Api.TodoList> Lists => Set<SimpleTodo.Api.TodoList>();
+   ```

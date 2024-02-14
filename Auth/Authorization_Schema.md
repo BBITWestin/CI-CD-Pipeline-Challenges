@@ -6,7 +6,7 @@ This document explains the authorization schema goals for WaaS then explores wha
 
 ## Description & Goals for Authorization Schema
 
-Initially put thunk by boss man @BBIJAllen.
+From boss man @BBIJAllen.
 
 - We want individual and team-based authorization at the `branch`, `customer`, and `load` level.
 - `Branches` have `customers`. `Customers` have `loads`.

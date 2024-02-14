@@ -12,36 +12,18 @@
 ```
 │   README.md
 │
-├───Auth
-│   │   Auth-Challenges.md
-│   │   Authorization_Schema.md
-│   │   AzAD_Setup.md
-│   │
-│   └───images
-│           Azure_Auth0_Pricing.png
-│           error.png
-│           redirect.png
-│           redirectConfirm.png
-│           signup.png
-│           sorry.png
+├───[Auth](https://github.com/BBITWestin/BBITWestin.github.io/tree/main/Auth)
+│   │   [Auth-Challenges.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Auth-Challenges.md)
+│   │   [Authorization_Schema.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Authorization_Schema.md)
+│   │   [AzAD_Setup.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/AzAD_Setup.md)
 │
-├───ML_QUOTE_BOT
-│   │   ML_Quote_Bot_init.md
-│   │   ML_Quote_Bot_Research.md
-│   │
-│   └───images
-│           Independent_vars.png
-│           k_fold.png
-│           ML_Algorithms.png
-│           ML_Missing Data.png
-│           model_comparison.png
-│           variable_importance.png
+├───[ML_QUOTE_BOT](https://github.com/BBITWestin/BBITWestin.github.io/tree/main/ML_QUOTE_BOT)
+│   │   [ML_Quote_Bot_init.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/ML_QUOTE_BOT/ML_Quote_Bot_init.md)
+│   │   [ML_Quote_Bot_Research.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/ML_QUOTE_BOT/ML_Quote_Bot_Research.md)
 │
-└───Pipelines
-    │   PipelineConcurrency.md
-    │   RefreshClientOnDeployment.md
-    │
-    └───images
+└───[Pipelines](https://github.com/BBITWestin/BBITWestin.github.io/tree/main/Pipelines)
+    │   [PipelineConcurrency.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Pipelines/PipelineConcurrency.md)
+    │   [RefreshClientOnDeployment.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Pipelines/RefreshClientOnDeployment.md)
 ```
 
 ## Contributing

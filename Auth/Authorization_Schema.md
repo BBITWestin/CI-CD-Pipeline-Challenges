@@ -57,6 +57,8 @@ Follow the steps in my [AzAd_Setup](https://github.com/BBITWestin/My-Docs/blob/m
 
 ### Roles
 
+- Note that the Azure AD custom roles feature is currently not available for Azure AD B2C directories.
+
 ### Custom Attributes / Claims
 
 #### Auth0 Demo
@@ -66,3 +68,7 @@ Follow the steps in my [AzAd_Setup](https://github.com/BBITWestin/My-Docs/blob/m
 ## Links
 
 - [Become best friends with Azure AD B2C (My AzAd_Demo_Walkthrough)](https://github.com/BBITWestin/My-Docs/blob/main/Auth/AzAD_Setup.md)
+
+# Next steps
+
+Finally here is our [Implementation Blueprint](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Auth-Proposal.md) for our use case.

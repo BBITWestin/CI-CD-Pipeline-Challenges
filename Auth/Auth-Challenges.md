@@ -12,6 +12,13 @@
   - Authorization Schema to View Load and Customer Level Data
     - Management Portal and Admin Users Managing Authorization Schema
 
+## Goals
+
+- Offset as much authentication and authorization tasks and logic to an **identity as a service provider**
+  - Authentication/Authorization shouldn't rely on tables in our database
+- Scalable authorization schema
+  - Onbording new customers/clients should be automated with little to no action required on our end
+
 ## 1. Access Control - ian was here
 
 Access control governs who can access particular data, applications, and resources inside an organization and under what circumstances. Here are the three popular access control types:

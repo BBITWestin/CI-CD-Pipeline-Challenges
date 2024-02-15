@@ -1,12 +1,21 @@
 # Implementation Blueprint
 
-Useing Azure AD B2C here is a summary of our proposal for how to implement our use case. So far we have looked at:
+So far we have looked at:
 
 - [Challenges + Access Controll Strategies](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Auth-Challenges.md)
 - [Azure AD B2C in the Field](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/AzAD_Setup.md)
 - [Our Use Case + Usefull Features in Azure B2C](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Authorization_Schema.md)
 
+## Goals
+
+- Offset as much authentication and authorization tasks and logic to an **identity as a service provider**
+  - Authentication/Authorization shouldn't rely on tables in our database
+- Scalable authorization schema
+  - Onbording new customers/clients should be automated with little to no action required on our end
+
 ## Proposal Summary
+
+Useing Azure AD B2C here is a summary of our proposal for how to implement our use case.
 
 ### User Flows
 

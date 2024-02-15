@@ -55,9 +55,9 @@ Follow the steps in my [AzAd_Setup](https://github.com/BBITWestin/My-Docs/blob/m
 
 ## Auth0 Features... for use case
 
-- stuff1
-- stuff2
-- stuff3
+### Roles
+
+### Custom Attributes / Claims
 
 #### Auth0 Demo
 

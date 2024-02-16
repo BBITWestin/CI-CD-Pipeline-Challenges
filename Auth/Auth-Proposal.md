@@ -9,13 +9,19 @@ So far we have looked at:
 ## Goals
 
 - Offset as much authentication and authorization tasks and logic to an **identity as a service provider**
-  - Authentication/Authorization shouldn't rely on tables in our database
+  - Authentication/Authorization should not rely on tables in our database
 - Scalable authorization schema
   - Onbording new customers/clients should be automated with little to no action required on our end
 
 ## Proposal Summary
 
-Useing Azure AD B2C here is a summary of our proposal for how to implement our use case.
+Using Azure AD B2C here is a summary of our proposal focusing on the implementation of Role-Based Access Control (RBAC) with hierarchical extensions for global and local roles, along with inheritance and overrides.
+
+... how the hell do we do this... the stuff below is great but doesn't help us come up with some sort of schema to handle this network of users and permissions... still lost here.
+
+This works great for specifying if a user should be able to access Financial info or some other category of actions. But what about assigning a single user access to financial info for just a single load.
+
+## Implementation Blueprint
 
 ### User Flows
 

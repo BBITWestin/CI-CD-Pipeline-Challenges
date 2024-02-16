@@ -43,23 +43,36 @@ From boss man @BBIJAllen.
     - Organization level access: not related to branch, customer, and load level access. But they have admin access for everything.
     - Example: Brent and Matt would be Super Admins for the BBI Logistics organization.
 
+## Recapp of our Users
+
+Lets reclarify what types of users we'll be dealing with and what resources were concered about protecting.
+
+`Customers/Shippers` AND `Carriers/Drivers` will be logging in through different portals but for auth purposes were just concerned about making sure they can view their loads.
+
+`Brokers` will be logging in through the management portal and should be able to view and edit customers and their customers loads. Only the management portal will be able to made edits so we don't need to worry about differentiating `view` vs `edit` access for customers/loads.
+
+So as it pertains to access control we care only about 2 things regardless of which portal they are logging into... viewing `Load Details`, and `Load Financial Details`. Viewing `Load Details`/`Load Financial Details` can be on a per user or per team basis.
+
+The _super admins_ for a customers company
+
+![model](./images/model.png)
+
 ## Azure AD B2C Features... for use case
 
-- stuff1
-- stuff2
-- stuff3
+### Roles
+
+- Note that the Azure AD custom roles AND groups feature is currently not available for Azure AD B2C directories.
+  - Any roles specified using the App Registration get applied and returned in the token only when the authenticated against standard Azure AD and not Azure AD B2C. See [here](https://learn.microsoft.com/en-us/answers/questions/1056490/roled-based-authorization-in-azure-ad-b2c) for details.
+
+### Custom Attributes / Claims
+
+Custom attributes are defined in the Azure AD B2C tenant, and once created, they can be used to collect additional information during user registration or through profile editing flows. They can also be included in tokens as claims, making them accessible to your application without the need for additional API calls.
 
 #### Azure AD Demo
 
 Follow the steps in my [AzAd_Setup](https://github.com/BBITWestin/My-Docs/blob/main/Auth/AzAD_Setup.md) doc to get a feel for how to implement Azure AD B2C. I tried my best to document every step I took and the problems (along with solutions) I encountered along the way, but it's still gonna be a pain to recreate, good luck.
 
 ## Auth0 Features... for use case
-
-### Roles
-
-- Note that the Azure AD custom roles feature is currently not available for Azure AD B2C directories.
-
-### Custom Attributes / Claims
 
 #### Auth0 Demo
 

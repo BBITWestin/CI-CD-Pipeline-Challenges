@@ -19,6 +19,11 @@ All of these calls can also be found in the `OcelotAPI` Postman Group then `MS G
       }
   ```
 
+- revokeSignInSessions
+  ```HTTP
+    POST /users/{id | userPrincipalName}/revokeSignInSessions
+  ```
+
 ### PATCH
 
 - Edit User Attributes

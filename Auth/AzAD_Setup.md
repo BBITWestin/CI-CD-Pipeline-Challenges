@@ -167,7 +167,65 @@ Some of the other things that seem a whole lot less exciting but we should prob 
 
 3. If you're using controllers then also make sure you have `builder.Services.AddControllers();` and `app.MapControllers();`
 4. After adding the controllers you might run into an issue with namespace vs class names in `TodoDb.cs` Simply add the namespace path (i think this is the right term) before the class name like so:
+
    ```c#
    public DbSet<SimpleTodo.Api.TodoItem> Items => Set<SimpleTodo.Api.TodoItem>();
    public DbSet<SimpleTodo.Api.TodoList> Lists => Set<SimpleTodo.Api.TodoList>();
+   ```
+
+5. Protect Endpoints
+
+   ```cs
+   [Authorize(Policy = "RequireAdmin")]
+   [HttpGet("require-admin")]
+   public ActionResult RequireAdminEndpoint()
+   {
+       return Ok(new { message = "User is signed in with isAdmin" });
+   }
+   ```
+
+   ```cs
+   builder.Services.AddAuthorization(options =>
+   {
+    // Policy for endpoints that require signing in only
+    options.AddPolicy("Authenticated", policy => policy.RequireAuthenticatedUser());
+
+    // Policy for endpoints that require the user to be an admin
+    options.AddPolicy("RequireAdmin", policy => policy.RequireClaim("extension_isAdmin", "true"));
+
+    // Policy for endpoints that require the user to have financial permissions
+    options.AddPolicy("RequireFinancial", policy => policy.RequireClaim("extension_isFinancial", "true"));
+    });
+   ```
+
+6. Aquire Token and make calls
+
+   ```js
+   DemoCaller.interceptors.request.use(
+     async (config) => {
+       console.log(
+         "=================================================================="
+       );
+       const accounts = msalInstance.getAllAccounts();
+       if (accounts.length > 0) {
+         const tokenResponse = await msalInstance.acquireTokenSilent({
+           account: accounts[0],
+           scopes: [
+             `https://transportationwaas.onmicrosoft.com/tasks-api/tasks.read`,
+             `https://transportationwaas.onmicrosoft.com/tasks-api/tasks.write`,
+           ],
+         });
+
+         const token = tokenResponse.accessToken;
+         config.headers = {
+           Authorization: `Bearer ${token}`,
+         };
+       }
+       console.clear();
+       return config;
+     },
+     (error) => {
+       Promise.reject(error);
+     }
+   );
    ```

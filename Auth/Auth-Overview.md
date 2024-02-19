@@ -31,3 +31,8 @@ Build an interface for role management, allowing authorized users to assign or r
 ### Audit Logs
 
 When implementing a system that allows users to modify roles or permissions for other users, audit logs and monitoring should be in place to track changes to groups and permissions.
+
+## Next Steps
+
+1. Hide isAdmin/isFinancial from user flow
+2. Auto assign to group on sign up invite.

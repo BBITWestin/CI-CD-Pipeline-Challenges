@@ -8,7 +8,7 @@ For the first working demo see [ATTEMPT 3](#ATTEMPT-3).
 
 ## ATTEMPT 1
 
-- The first thing I tried was [quickstart-web-app-dotnet](https://learn.microsoft.com/en-us/azure/active-directory-b2c/quickstart-web-app-dotnet), but was unsucessfull in getting the app to run. The problem I was running into was with the `Owin` dependancy which the project depends on. The project expects version 1.0.1 but [Owin](https://www.nuget.org/packages/Owin/1.0.0?_src=template) only has version 1.0.0 available and changing the dependancy to this version also didn't work. Since this sample app uses a .NET web app I'm going to skip over the quick start and follow the other tutorials which explain how to add Azure AD to an existing .NET web api.
+- The first thing I tried was [quickstart-web-app-dotnet](https://learn.microsoft.com/en-us/azure/active-directory-b2c/quickstart-web-app-dotnet), but was unsuccessful in getting the app to run. The problem I was running into was with the 'Owin' dependency which the project depends on. The project expects version 1.0.1 but [Owin](https://www.nuget.org/packages/Owin/1.0.0?_src=template) only has version 1.0.0 available and changing the dependency to this version also didn't work. Since this sample app uses a .NET web app I'm going to skip over the quick start and follow the other tutorials which explain how to add Azure AD to an existing .NET web api.
 
 ## ATTEMPT 2
 
@@ -24,7 +24,7 @@ For the first working demo see [ATTEMPT 3](#ATTEMPT-3).
        - `External ID User Flow Administrator`
      - If you were able to create the Tennant yourself than you will automatically be granted `global admin`.
 
-2. CAUTION: Azure considers a "web application" to be a traditional web application that performs most of the application logic on the server. So for our purposes this will be our .NET Core Web API!!! Our Frontend app on the other hand is considered a SPA (single page applications) for app registration purposes!!! We will need to regeister **BOTH** our React App as well as our .NET Core web api.
+2. CAUTION: Azure considers a "web application" to be a traditional web application that performs most of the application logic on the server. So for our purposes this will be our .NET Core Web API!!! Our Frontend app on the other hand is considered a SPA (single page applications) for app registration purposes!!! We will need to register **BOTH** our React App as well as our .NET Core web api.
 
    - I was able to complete 2A and 2B with the list of roles mentioned above. Meaning it's doable without `global admin`.
    - Make sure to copy the app secret values directly after generating them in these steps! "This secret value is never displayed again after you leave this page".
@@ -49,7 +49,7 @@ For the first working demo see [ATTEMPT 3](#ATTEMPT-3).
   - Infact microsoft actually recommends this... see [Migrate from the implicit flow](https://learn.microsoft.com/en-us/azure/active-directory-b2c/tutorial-register-spa#migrate-from-the-implicit-flow).
 - I was still unable to get the spa app registration to work with `Run user flow` but the documentation makes me think this has to do with the limitations of testing it in azure... We'll see.
 
-Takeaway: Use MSAL 2.0+ and DON'T use Implicit grant. I just didn't find this recomendation until afterwards.
+Takeaway: Use MSAL 2.0+ and DON'T use Implicit grant. I just didn't find this recommendation until afterwards.
 
 Now lets test the user flow with the web app registration we made.
 ![signup](./images/signup.png)
@@ -88,7 +88,7 @@ The demo above proves we can get away with setting up Azure AD B2C with `Applica
 
 Watch me get lost in the MS docs:
 
-1. I decided to keep as much of the react template code as possible and instead created a MSAL wrapper componenet in place of App.js. This means I didn't copy and **replace** as the guide suggest but added the MSAL stuff that looked important...
+1. I decided to keep as much of the react template code as possible and instead created a MSAL wrapper component in place of App.js. This means I didn't copy and **replace** as the guide suggested but added the MSAL stuff that looked important...
 
 2. So it turns out if you follow the guide you'll actually still be missing a ton of required files used by the snippets so I ended up just cloning the repo they were referencing and replacing my ./web/src folder with the new /src folder.
 
@@ -114,7 +114,7 @@ Now time to update our authConfig.js file. To do this we first need to create ou
 
 - [Configure authentication in a sample React single-page application by using Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/configure-authentication-sample-react-spa-app#31-configure-the-react-sample)
 
-  - MAKE SURE YOU GO BACK THROUGH AND ADD YOUR REDIRECT URLS IN THE SPA APP REGISTRATION. It may take 10-20 minutes to update... Also try clearing histroy/cookies and try again after making any updates.
+  - MAKE SURE YOU GO BACK THROUGH AND ADD YOUR REDIRECT URLS IN THE SPA APP REGISTRATION. It may take 10-20 minutes to update... Also try clearing history/cookies and try again after making any updates.
     ![redirect](./images/redirect.png)
   - If this still doesn't work then try deleting the `Single-page application` platform and adding a new one with the correct redirect url.
     ![redirectConfirm](./images/redirectConfirm.png)

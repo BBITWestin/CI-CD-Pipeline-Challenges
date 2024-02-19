@@ -45,7 +45,7 @@ From boss man @BBIJAllen.
 
 ## Recapp of our Users
 
-Lets reclarify what types of users we'll be dealing with and what resources were concered about protecting.
+Lets reclarify what types of users we'll be dealing with and what resources were concerned about protecting.
 
 `Customers/Shippers` AND `Carriers/Drivers` will be logging in through different portals but for auth purposes were just concerned about making sure they can view their loads.
 

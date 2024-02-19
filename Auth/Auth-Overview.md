@@ -2,17 +2,17 @@
 
 So far we have looked at:
 
-- [Challenges + Access Controll Strategies](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Auth-Challenges.md)
+- [Challenges + Access Control Strategies](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Auth-Challenges.md)
 - [Azure AD B2C in the Field](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/AzAD_Setup.md)
-- [Our Use Case + Usefull Features in Azure B2C](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Authorization_Schema.md)
+- [Our Use Case + Useful Features in Azure B2C](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Authorization_Schema.md)
 - [MS Graph with Azure B2C](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/MS-GraphAPI.md)
 
 ## Goals
 
 - Offset as much authentication and authorization tasks and logic to an **identity as a service provider**
-  - Ideally authentication/authorization should not rely on tables in our database
+  - Ideally, authentication/authorization should not rely on tables in our database
 - Scalable authorization schema
-  - Onbording new customers/clients should be automated with little to no action required on our end
+  - Onboarding new customers/clients should be automated with little to no action required on our end
 
 ## Proposal Summary
 

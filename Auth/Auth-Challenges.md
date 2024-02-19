@@ -17,7 +17,7 @@
 - Offset as much authentication and authorization tasks and logic to an **identity as a service provider**
   - Authentication/Authorization shouldn't rely on tables in our database
 - Scalable authorization schema
-  - Onbording new customers/clients should be automated with little to no action required on our end
+  - Onboarding new customers/clients should be automated with little to no action required on our end
 
 ## 1. Access Control - ian was here
 
@@ -56,7 +56,7 @@ The second I get assigned to Herzog's team I should have access to his load boar
 
 #### Advantages
 
-- Policies can be precisely defined, targetting specific attributes rather than the roles of the users.
+- Policies can be precisely defined, targeting specific attributes rather than the roles of the users.
 - Dynamic access: Since rules can be specified based on environmental parameters, access control can be done at runtime by evaluating the context.
 
 #### Disadvantages
@@ -79,7 +79,7 @@ Herzog needs my help on a load for the day. He gives me permission in some admin
 
 #### Disadvantages
 
-- Less scalable: When the number of users is high, how can we ensure were managing permissions for each user correctly.
+- Less scalable: When the number of users is high, how can we ensure we're managing permissions for each user correctly.
 
 ### Other Notes
 
@@ -102,7 +102,7 @@ Preview = :shit: :wastebasket: :boom: :fire: :ambulance:
 [Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/overview) provides business-to-customer identity as a service.
 
 - [Technical and feature overview of Azure Active Directory B2C](https://learn.microsoft.com/en-us/azure/active-directory-b2c/technical-overview)
-- Azure AD seems to lack any sort of dedicated method of permission based access conrol or even claims based. Although they do offer custom user attibutes and claims leaving it up to us. Its questionable if we can integrate these custom attibutes into our app, meaning how can user1A manage user1B's custom atributes in our frontend? `More research needed`.
+- Azure AD seems to lack any sort of dedicated method of permission based access control or even claims based. Although they do offer custom user attributes and claims leaving it up to us. Its questionable if we can integrate these custom attributes into our app, meaning how can user1A manage user1B's custom attributes in our frontend? `More research needed`.
 
 ### Auth0
 

@@ -24,14 +24,7 @@ Clean and preprocess the data:
 
 ## 3. Model Selection
 
-Given the nature of the problem (predicting a continuous value), regression models are suitable. We may want to consider starting with simpler models and gradually moving to more complex ones only if necessary:
-
-- **Linear Regression**: Good starting point for establishing a baseline.
-- **Random Forest Regressor**: A more complex model that can capture nonlinear relationships.
-- **Gradient Boosting Machines (GBM)**: XGBoost, LightGBM, or CatBoost, are popular for regression tasks.
-- **Deep Learning Models**: Neural networks can be beneficial, especially with large datasets and complex relationships, but they require more computational resources.
-
-See the two links below for why these models might be best.
+Given the nature of the problem (predicting a continuous value), regression models are suitable. We may want to consider starting with simpler models and gradually moving to more complex ones only if necessary.
 
 ## 5. Feature Selection
 
@@ -39,6 +32,7 @@ Use techniques to select the most relevant features to reduce model complexity a
 
 - [Correlation analysis](https://www.geeksforgeeks.org/what-is-correlation-analysis/?ref=header_search)
 - Feature importance from model
+- Or simply just using the features that other studies have found to be most important... [Prediction of Shipping Cost on Freight Brokerage Platform Using Machine Learning](https://www.mdpi.com/2071-1050/15/2/1122)
 
 ## 6. Model Training and Validation
 

@@ -4,6 +4,8 @@
 
 The following are my notes / summary from [Prediction of Shipping Cost on Freight Brokerage Platform Using Machine Learning](https://www.mdpi.com/2071-1050/15/2/1122).
 
+Reviews of this paper found here: [Peer-Review Record](https://www.mdpi.com/2071-1050/15/2/1122/review_report)
+
 ## Abstract
 
 This study derives the main variables that influence the setting of the shipping costs and presents the recommended shipping cost given by a price prediction model using machine learning methods.

@@ -35,7 +35,7 @@ R-squared was used as the performance evaluation index for the predictive model.
 
 ### Theoretical Background
 
-According to the learning method, machine learning is categorized as supervised learning and unsupervised learning. Supervised learning is a learning algorithm that learns data with input and output values, and it predicts output values for unseen data or future data. It is used for classification or regression analysis.
+Supervised learning is a learning algorithm that learns data with input and output values, and it predicts output values for unseen data or future data. It is used for classification or regression analysis.
 
 ![ML_Algorithms](./images/ML_Algorithms.png)
 
@@ -67,7 +67,7 @@ The interquartile range (IQR) was used to remove outliers in the data. Outlier r
 
 After applying two methods for managing missing values, we compared which method was more useful. Before the processing of missing values, factors for which more than 50% of the data were missing were determined to be factors that did not have a great influence on the prediction and were, thus, removed. We removed 20 factors, including “load/unload name address,” “summary,” and “order number.” For the missing value treatment, listwise deletion and the mean imputation were used, and a dataset was created to which each treatment for missing values was applied. The listwise deletion removed all data with missing values, and the mean imputation replaced the missing values with the average value of each factor.
 
-![alt text](./images/ML_Missing Data.png)
+![alt text](./images/ML_Missing_Data.png)
 
 ## Derivation of Key Factors
 

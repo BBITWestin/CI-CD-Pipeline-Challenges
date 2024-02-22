@@ -119,12 +119,15 @@ Azure Sample App starting point!
 - How should we approach the Repository layer? What are benefits/drawbacks of multiple Repositories?
 
 ```
+If we end up using gateway calls to collect the data we need then we do we need all this arch to enforce how we interact with our database. And in the case that we use some kind of copy of the wildcat db then with each of these portals being seperate repos chances are we won't be dealing with a ton of calls per repo where a simpler controller handler arch makes more sense.
+
+
 The repository layer is where we are actually interacting with the database.
 We pass queries to the repo layer abstracting away our LINQ. Why abstract away our LINQ unless we plan on using the same expressions for several handlers. But lets go with
 
 My biggest thing with this is I want to be able to have full control over my LINQ queries on a per call basis in order to make the query which best fits for the call. If we start abstracting away our LINQ from our handlers then we'll be tempted to use abstracted functions which get the job done, but might not be most efficient for the use case.
 
-Cartesian explosion & Split Queries...
+Cartesian explosion & Split Queries...   includes().select()...
 ```
 
 12. What backend file structure should we use?
@@ -401,3 +404,9 @@ However we don't need to hold off on all development until then. We can get one 
 OTHER QUESTIONS
 
 - To truely seperate all of our resources from everything else should we create a new subscription in azure?
+
+### NOTES:
+
+DB will eventually be wildcat db or copy of wildcat updated daily.
+
+Look into what github actions can do for us as far as testing succesffull deployments...

@@ -1,6 +1,6 @@
 # My Docs
 
-VIEW ON GITHUB PAGES!!! => [https://bbitwestin.github.io](https://bbitwestin.github.io/)
+VIEW ON GITHUB PAGES!!! => [https://MyDocs](https://MyDocs/)
 
 <!-- ![Static Badge](https://img.shields.io/badge/------------%20HELLO%20WORLD%20-------------8A2BE2.svg?style=for-the-badge) -->
 
@@ -13,18 +13,18 @@ VIEW ON GITHUB PAGES!!! => [https://bbitwestin.github.io](https://bbitwestin.git
 ```
 │   README.md
 │
-├───:open_file_folder:[Auth](https://github.com/BBITWestin/BBITWestin.github.io/tree/main/Auth)
-│   │   :spiral_notepad:[Auth-Challenges.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Auth-Challenges.md)
-│   │   :spiral_notepad:[Authorization_Schema.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/Authorization_Schema.md)
-│   │   :spiral_notepad:[AzAD_Setup.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Auth/AzAD_Setup.md)
+├───:open_file_folder:[Auth](https://github.com/BBITWestin/MyDocs/tree/main/Auth)
+│   │   :spiral_notepad:[Auth-Challenges.md](https://github.com/BBITWestin/MyDocs/blob/main/Auth/Auth-Challenges.md)
+│   │   :spiral_notepad:[Authorization_Schema.md](https://github.com/BBITWestin/MyDocs/blob/main/Auth/Authorization_Schema.md)
+│   │   :spiral_notepad:[AzAD_Setup.md](https://github.com/BBITWestin/MyDocs/blob/main/Auth/AzAD_Setup.md)
 │
-├───:open_file_folder:[ML_QUOTE_BOT](https://github.com/BBITWestin/BBITWestin.github.io/tree/main/ML_QUOTE_BOT)
-│   │   :spiral_notepad:[ML_Quote_Bot_init.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/ML_QUOTE_BOT/ML_Quote_Bot_init.md)
-│   │   :spiral_notepad:[ML_Quote_Bot_Research.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/ML_QUOTE_BOT/ML_Quote_Bot_Research.md)
+├───:open_file_folder:[ML_QUOTE_BOT](https://github.com/BBITWestin/MyDocs/tree/main/ML_QUOTE_BOT)
+│   │   :spiral_notepad:[ML_Quote_Bot_init.md](https://github.com/BBITWestin/MyDocs/blob/main/ML_QUOTE_BOT/ML_Quote_Bot_init.md)
+│   │   :spiral_notepad:[ML_Quote_Bot_Research.md](https://github.com/BBITWestin/MyDocs/blob/main/ML_QUOTE_BOT/ML_Quote_Bot_Research.md)
 │
-└───:open_file_folder:[Pipelines](https://github.com/BBITWestin/BBITWestin.github.io/tree/main/Pipelines)
-    │   :spiral_notepad:[PipelineConcurrency.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Pipelines/PipelineConcurrency.md)
-    │   :spiral_notepad:[RefreshClientOnDeployment.md](https://github.com/BBITWestin/BBITWestin.github.io/blob/main/Pipelines/RefreshClientOnDeployment.md)
+└───:open_file_folder:[Pipelines](https://github.com/BBITWestin/MyDocs/tree/main/Pipelines)
+    │   :spiral_notepad:[PipelineConcurrency.md](https://github.com/BBITWestin/MyDocs/blob/main/Pipelines/PipelineConcurrency.md)
+    │   :spiral_notepad:[RefreshClientOnDeployment.md](https://github.com/BBITWestin/MyDocs/blob/main/Pipelines/RefreshClientOnDeployment.md)
 ```
 
 ## Contributing

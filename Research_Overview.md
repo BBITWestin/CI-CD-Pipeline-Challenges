@@ -362,7 +362,7 @@ Typescript documentation on types/interfaces?
 32. What is our tolerance for warnings on the frontend and backend?
 
 ```
-...ZERO TOLERANCE!!!! But there will simply be warning that we might not be able to avoid... For a warning to be acceptable it must be approved by team?
+But there will simply be warning that we might not be able to avoid... For a warning to be acceptable it must be approved by team?
 ```
 
 33. Should we create user guides?
@@ -410,3 +410,14 @@ OTHER QUESTIONS
 DB will eventually be wildcat db or copy of wildcat updated daily.
 
 Look into what github actions can do for us as far as testing succesffull deployments...
+
+### StyleX
+
+Vite plugin for StyleX
+This plugin is in early development and may not work as expected. Please report any issues you find.
+
+### Docs
+
+ReadMe's and comments IN the code.
+
+# ROAD MAP

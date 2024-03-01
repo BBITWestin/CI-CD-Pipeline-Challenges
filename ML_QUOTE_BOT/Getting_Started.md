@@ -5,3 +5,5 @@
 ## Gradient Boosting
 
 Uses gradient decent to find minimums in the loss function. Ideally these end up being global minimums and not local.
+
+DEMO STEPS

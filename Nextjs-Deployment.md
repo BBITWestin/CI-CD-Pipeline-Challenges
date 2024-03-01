@@ -26,28 +26,34 @@ Azure supports two different kinds of Nextjs hosting... 1.Static HTML 2."Hybrid"
 
 ## Steps to recreate deployment test
 
-Here is the setup for my first test
-TSX - no
-ESLint - no
-Tailwind - yes
-src/ - no
-App Router - yes
-customize alias - n
+![alt text](image.png)
+![alt text](image-1.png)
+
+sry i know this isn't the best documentation... Looking to come back to this to put together a full step by step tutorial for nextjs with azure...
 
 2.Problem: Azure defaults static web apps to use node version 16, however nextjs13 and above requires atleast node 18.
-2.Solution(s): Add
+2.Solution(s): Add to package.json:
 
+```
 "engines": {
-"node": "18.17.1"
+    "node": "18.17.1"
 }
+```
+
 (Azure Static Web does NOT support node 20)
-to package.json (absolutely nowhere is this documented...) If this fails try to specify node version in workflow file as well...
+(absolutely nowhere is this documented...) If this fails try to specify node version in workflow file as well in the next step.
 
 # Set up Node.js environment
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18.17.1" # Replace with your desired version
+Add the following step before
+
+```yml
+- name: Setup Node.js
+  uses: actions/setup-node@v3
+  with:
+    node-version: "18.17.1" # Replace with your desired version but make sure it's compatible with azure static web apps.
+```
 
 If this fails go to `https://shell.azure.com/` and attempt to run `az webapp config appsettings set --name <app-name> --resource-group <resource-group-name> --settings WEBSITE_NODE_DEFAULT_VERSION="~18"` however this requires "mounted storage" whatever that is.
+
+Also note that there is limited functionality between azure cli for static web apps using nextjs.... sucks..

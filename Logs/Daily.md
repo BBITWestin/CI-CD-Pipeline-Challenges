@@ -1,3 +1,13 @@
+### 1/29/2024 - 3/5/2024
+
+No logs
+
+1. Started on team darwin, switched to team transpo day 2.
+2. Reach weeks for project portal!
+3. Pushed a bug on my first transpo task
+4. CI/CD MASTER!
+5. Learned bicep, powershell, azure command line, microsoft graph command line
+
 ### 3/6/2024 - Wednesday
 
 CI/CD!!!! Today I created a powershell script to provision a service principle (app registration) with federated credentials scoped down to have a contributor role for a resource group to be used by github actions!!! Woo!

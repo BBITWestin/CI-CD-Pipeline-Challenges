@@ -10,9 +10,11 @@ No logs
 
 ### 3/6/2024 - Wednesday
 
-CI/CD!!!! Today I created a powershell script to provision a service principle (app registration) with federated credentials scoped down to have a contributor role for a resource group to be used by github actions!!! Woo!
+CI/CD!!!! Today i created a powershell script to provision a service principle (app registration) with federated credentials scoped down to have a contributor role for a resource group to be used by github actions!!! Woo!
 
 ### 3/7/2024 - Thursday
+
+More CI/CD... Today emily and i updated our app registration provision script to handle different portals and environments. Then we created another script to create a subscription level runner which we are looking to automatically create and delete before/after provision workflows... check it out here: https://github.com/bbi-dev-ops/project-portal-management/tree/main/github_runner_scripts_dont_touch
 
 ### 3/8/2024 - Friday
 

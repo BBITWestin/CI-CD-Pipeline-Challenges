@@ -18,7 +18,11 @@ More CI/CD... Today emily and i updated our app registration provision script to
 
 ### 3/8/2024 - Friday
 
+Code review this morning... all ps1 scripts working and github actions running fine. Spent the second half of the day working with Viraj or ML quote bot project and we've just discovered Azure's Machine Learning workspace... Reached the valley of dispair in the Dunning-Kruger curve.
+
 ### 3/11/2024 - Monday
+
+Starting to work on powershell scripts for setting up B2C resources.
 
 ### 3/12/2024 - Tuesday
 

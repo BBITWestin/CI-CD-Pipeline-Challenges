@@ -26,7 +26,12 @@ Starting to work on powershell scripts for setting up B2C resources.
 
 ### 3/12/2024 - Tuesday
 
+More b2c app reg ps1 stuff
+
 ### 3/13/2024 - Wednesday
+
+More b2c app reg ps1 stuff
+TODO: clean up the ps1 files and add documentation. Also setup auth in the swa and api... and fix the suffix problem when repovisioning the runners... then figure out how to edit the variables stored in github from the command line...
 
 ### 3/14/2024 - Thursday
 

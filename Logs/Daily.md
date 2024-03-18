@@ -35,9 +35,15 @@ TODO: clean up the ps1 files and add documentation. Also setup auth in the swa a
 
 ### 3/14/2024 - Thursday
 
+Azure Auto ML jobs started and proof of concept completed. Have questions for matt by wednesday
+
 ### 3/15/2024 - Friday
 
+Code review presentation on npm run in wrong directory, and azure b2c manager script.
+
 ### 3/18/2024 - Monday
+
+Updating docs for azure b2c manager script... componetizing stuff.
 
 ### 3/19/2024 - Tuesday
 

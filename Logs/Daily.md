@@ -43,22 +43,27 @@ Code review presentation on npm run in wrong directory, and azure b2c manager sc
 
 ### 3/18/2024 - Monday
 
-Updating docs for azure b2c manager script... componetizing stuff.
+Updating docs for azure b2c manager script... setting up MSAL in the frontend and attempted to protect some endpoints but ran into cors issues and useQurry init... Trying to come up with a PortalCaller.tsx that we can use everywhere.
 
-### 3/19/2024 - Tuesday
+### 3/19/2024 (Tuesday) - 3/29/2024 (Friday)
 
-### 3/20/2024 - Wednesday
+- Solved CORS issues for management portal including Veet build and deploy bugs.
+- Updates to BBILogistics.com website
+- Setup frontend and backend for different environments with same code. Vite env files and dotnet asp environment variables set on provision.
+- Codeowners file for github pr reviews.
+- Github branch protection rules.
+- ENTIRE PROJECT STEPS TO RECREATE README!!! (several days)
+- Machine Learning Project: Google drive api + service account python scripts + Outlook MS Graph python script for fetching data.
 
-### 3/21/2024 - Thursday
+### 4/1/2024 (Tuesday)
 
-### 3/22/2024 - Friday
+- Continued working on the `steps the recreate` doc for all of project portal. Everything from Making the new repo to specifying which ports to use, to onion arch, to implementing azure b2c with msal... everything.
 
-### 3/25/2024 - Monday
+### 4/2/2024 (Wednesday)
 
-### 3/26/2024 - Tuesday
+- Started research on preview environments for pr's.w
+- Worked with seph on steps to recreate docs for project portal dotnet api.
 
-### 3/27/2024 - Wednesday
+### 4/3/2024 (Thursday)
 
-### 3/28/2024 - Thursday
-
-### 3/29/2024 - Friday
+- Preview Enviroment research / planning.

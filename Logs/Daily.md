@@ -55,15 +55,42 @@ Updating docs for azure b2c manager script... setting up MSAL in the frontend an
 - ENTIRE PROJECT STEPS TO RECREATE README!!! (several days)
 - Machine Learning Project: Google drive api + service account python scripts + Outlook MS Graph python script for fetching data.
 
-### 4/1/2024 (Tuesday)
+### 4/1/2024 (Monday)
 
 - Continued working on the `steps the recreate` doc for all of project portal. Everything from Making the new repo to specifying which ports to use, to onion arch, to implementing azure b2c with msal... everything.
 
-### 4/2/2024 (Wednesday)
+### 4/2/2024 (Tuesday)
 
-- Started research on preview environments for pr's.w
+- Machine Learning google service account for preprocessing csv's from a shared google drive folder.
+
+### 4/3/2024 (Wednesday)
+
+- Started research on preview environments for pr's.
 - Worked with seph on steps to recreate docs for project portal dotnet api.
 
-### 4/3/2024 (Thursday)
+### 4/4/2024 (Wednesday)
 
 - Preview Enviroment research / planning.
+
+### 4/5/2024 (Thursday) - 4/10/2024 (Wednesday)
+
+- PR Staging environments built for the first time!!! Full backend, frontent, and auth...
+- Project dendrite still waiting on good data... havn't gotten any emails since 3/25 and only 5 of the 20 something emails work in the first place.
+
+### 4/6/2024 (Friday) - 4/15/2024 (Monday)
+
+- PR Staging env's managing valid redirect urls.
+- PR github action concurrency groups.
+- PR Staging env's custom CORS function.
+- Email Invite research.
+- Auth RBAC research and planning.
+
+### 4/15/2024 (Monday)
+
+- Project Portal multi tenant solutions for each env (prod, stage, dev).
+
+### 4/16/2024 (Tuesday)
+
+- Data preprocessing scripts for quote bot.
+  - Use local files instead of fetched.
+- Started Auth RBAC implementation

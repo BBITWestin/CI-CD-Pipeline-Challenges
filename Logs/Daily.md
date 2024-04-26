@@ -79,10 +79,10 @@ Updating docs for azure b2c manager script... setting up MSAL in the frontend an
 
 ### 4/6/2024 (Friday) - 4/15/2024 (Monday)
 
-- PR Staging env's managing valid redirect urls.
-- PR github action concurrency groups.
-- PR Staging env's custom CORS function.
-- Email Invite research.
+- PR Stages: managing valid redirect urls.
+- PR Stages: github action concurrency groups.
+- PR Stages: custom CORS function.
+- B2C Email Invite research: Docs [here](https://github.com/bbi-dev-ops/project-portal-management/blob/dev/DOCS/B2C_INVITES.md)
 - Auth RBAC research and planning.
 
 ### 4/15/2024 (Monday)
@@ -94,3 +94,46 @@ Updating docs for azure b2c manager script... setting up MSAL in the frontend an
 - Data preprocessing scripts for quote bot.
   - Use local files instead of fetched.
 - Started Auth RBAC implementation
+
+### 4/17/2024 (Wednesday)
+
+- Continued Auth RBAC implementation
+
+### 4/18/2024 (Thursday)
+
+- Continued Auth RBAC implementation
+- Jot Form for marketing
+- Discovered app service (api) identity regisration >> Key vault access policies.
+  - In order for the app service to fetch values from the key vault we need to register the app service as an identiy and then create a access policy in the key vault to allow this identity to Get,List the Secrets.
+- Project Portal Postman set up. Different envs. AuthDemo collection.
+- Auth RBAC ERD
+
+### 4/19/2024 (Friday)
+
+- Code review prep
+- Code review
+-
+
+### 4/22/2024 (Monday)
+
+GOAL FOR TODAY: Implement the identiy registration and key vauly access policy updates for preview environments.
+
+If anyone has any interest in learning more about how I set up preview environments and wants to get their hands dirty I've got a task for somebody to take, otherwise, I plan on doing it on Monday.
+
+Background: Our app services (backend) need to reach out to the key vault in their respective resource group to grab secrets like the database connection string. In order for the app service to do this it needs to have the `List` and `Get` **secrets** permissions in the key vault **Access Policies**. In order to create an access policy for an app service the app service must have the `Identity Status` switched from off to on.
+
+Your Mission if you choose to accept it:
+
+- In the `preview-environment.yml` add a job after the `create_deployment_slot` job to turn on the `Identity Status` for this new slot.
+- In the `preview-environment.yml` add a job after `Identity Status` is turned on to create an access policy in the `kv-management-dev-tnpv` key vault with **Secret permissions** `Get` and `List` and make sure the `Principal` is set the object id generated for the deployment slot which can be found after turning `Identity Status` on.
+- In the `preview-environment.yml` make `build_deploy_backend_slot` depend on these first two steps to prevent the backend from failing on start up.
+- In the `cleanup_preview.yml` add a job to remove the access policy for the deleted app service deployment slot.
+
+### 4/23/2024 (Tuesday) - 4/26/2024 (Friday)
+
+- RBAC Crud
+- Create Role Assignment Form for customer and load
+- React Query Mutaitons
+- Quote bot is ready for demo
+  - New preprocessing and model trained on R2 instead of normalized... somethin
+  - Frontend updates to have spinning matt

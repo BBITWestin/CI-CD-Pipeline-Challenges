@@ -238,9 +238,36 @@ I didn't keep track this month sadly.
 ### 6/06/2024 (Thursday)
 
 - QUOTE BOT DAY!!!
+- Met with Brent, Koss, Matt, Wack, and Kiefer to talk about quote bot. 12-2.
 
 ### 6/07/2024 (Friday)
 
-- GetLoadListFaster() in schema mapper
-- Code Review
-- Quote bot...
+- GetLoadListFaster() in schema mapper...
+- Code Review...
+- Quote bot planning
+
+### 6/10/2024 (Monday)
+
+- Schema Mapper get load board load list rework (possibly hundreds of db calls
+  down to 2)
+- Met with jacob, misha, and matt to talk about quote bot timeline and then met
+  with brent later in the day to talk about heat map and timeline.
+  - Plan is to dedicate 2 week block of time to quote bot most likely starting
+    on monday.
+
+### 6/11/2024 (Tuesday)
+
+- Schema mapper get load status in the get load board load list function.
+  - GetLoadList is SPEEEEDDYYY!
+- PAGINATION!!!! KEY based vs `skip take` based.
+
+### 6/12/2024 (Wednesday)
+
+- Finished schema mapper get load list faster function to handle fincanial
+  details => portal load status.
+- Handle duplicate loads from the ER table by customerIds from the
+  loadAccessList.
+
+### 6/13/2024 (Thursday)
+
+### 6/14/2024 (Friday)

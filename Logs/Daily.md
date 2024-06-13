@@ -270,4 +270,8 @@ I didn't keep track this month sadly.
 
 ### 6/13/2024 (Thursday)
 
+- Wildcat ER table Secondary Customer HELL
+  - Load Board call should return the name of the secondary customer name / id
+    if that's how we have access to the load.
+
 ### 6/14/2024 (Friday)

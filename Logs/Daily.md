@@ -275,3 +275,80 @@ I didn't keep track this month sadly.
     if that's how we have access to the load.
 
 ### 6/14/2024 (Friday)
+
+- Schema Mapper ER table SOLUTION!!!!
+  - Code review + completely resolved GetLoadListFaster issues (prod ready)
+- If this was the end of the first official portal sprint I had a ton of points
+  the past 2-3 weeks.
+- The past few months feel like I've been absolutely flying though work. I've
+  been able to move pretty quick through project portal.
+
+### 6/17/2024 (Monday)
+
+### 6/18/2024 (Tuesday)
+
+### 6/19/2024 (Wednesday)
+
+### 6/20/2024 (Thursday)
+
+### 6/21/2024 (Friday)
+
+### 6/24/2024 (Monday)
+
+### 6/25/2024 (Tuesday)
+
+### 6/26/2024 (Wednesday)
+
+### 6/27/2024 (Thursday)
+
+### 6/28/2024 (Friday)
+
+### 7/1/2024 (Monday)
+
+### 7/2/2024 (Tuesday)
+
+### 7/3/2024 (Wednesday)
+
+### 7/4/2024 (Thursday)
+
+### 7/5/2024 (Friday)
+
+### 7/8/2024 (Monday)
+
+### 7/9/2024 (Tuesday)
+
+### 7/10/2024 (Wednesday)
+
+### 7/11/2024 (Thursday)
+
+### 7/12/2024 (Friday)
+
+### 7/15/2024 (Monday)
+
+### 7/16/2024 (Tuesday)
+
+### 7/17/2024 (Wednesday)
+
+### 7/18/2024 (Thursday)
+
+### 7/19/2024 (Friday)
+
+### 7/22/2024 (Monday)
+
+### 7/23/2024 (Tuesday)
+
+### 7/24/2024 (Wednesday)
+
+### 7/25/2024 (Thursday)
+
+### 7/26/2024 (Friday)
+
+### 7/29/2024 (Monday)
+
+### 7/30/2024 (Tuesday)
+
+### 7/31/2024 (Wednesday)
+
+### 8/1/2024 (Thursday)
+
+### 8/2/2024 (Friday)

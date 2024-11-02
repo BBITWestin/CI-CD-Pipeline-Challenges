@@ -285,6 +285,10 @@ I didn't keep track this month sadly.
 
 ### 6/17/2024 (Monday)
 
+- First day of Quote bot sprint which will last 2 weeks.
+  - We had 16 days of work planned for quote bot release and will have 10 days
+    during this sprint to get as much done as possible.
+
 ### 6/18/2024 (Tuesday)
 
 ### 6/19/2024 (Wednesday)

@@ -26,6 +26,21 @@ another 30 hours.
 
 # Now its time to start tracking
 
-11/1/2024: 6pm - 12:00am
+11/1/2024: 6pm - 12:00am (6 hours)
 
-11/2/2024: 12am -
+11/2/2024: 12am - 2:30am (2.5 hours)
+
+11/15/2023: 4pm - 10:30pm
+
+11/16/2023: 3pm - 12:00am 11/17/2023: 12:00am - 3:15pm (1k mg caffine and boom
+half of quote bot backend is done being refactored to acomidate outlook add in)
+
+- That's 24+ hours at my desk. That's crazy. Time flew by tho! (24.5 hours)
+
+11/18/2023: 4pm - 5pm (~1 hour)
+
+11/19/2023: 4pm - 5pm (~1 hour)
+
+11/21/2023: 4pm - 5pm (~1 hour)
+
+11/22/2023: 4pm - 5:30pm (1.5 hours)
